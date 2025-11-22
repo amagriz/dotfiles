@@ -1,0 +1,8 @@
+theme = OsakaJade.conf
+macos-titlebar-style = tabs
+font-size = 16
+font-family = "JetBrainsMono Nerd Font"
+background-opacity = 0.7
+background-blur = 80
+window-padding-x = 10
+shell-integration = zsh
