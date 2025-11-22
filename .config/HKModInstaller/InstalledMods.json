@@ -1,0 +1,37 @@
+{
+  "Mods": {
+    "Satchel": {
+      "Version": "0.9.4.0",
+      "Enabled": true,
+      "Pinned": false
+    },
+    "HKMirror": {
+      "Version": "2.1.0.0",
+      "Enabled": true,
+      "Pinned": false
+    },
+    "ControllerFixes": {
+      "Version": "1.0.4.0",
+      "Enabled": true,
+      "Pinned": false
+    },
+    "SFCore": {
+      "Version": "1.5.14.16",
+      "Enabled": true,
+      "Pinned": false
+    },
+    "ScreenResolution": {
+      "Version": "1.5.0.0",
+      "Enabled": true,
+      "Pinned": false
+    }
+  },
+  "NotInModlinksMods": {},
+  "HasVanilla": false,
+  "ApiInstall": {},
+  "_ApiState": {
+    "Version": "74.0.0",
+    "Enabled": true,
+    "Pinned": false
+  }
+}

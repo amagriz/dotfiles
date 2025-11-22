@@ -1,0 +1,14 @@
+{
+  "ManagedFolder": "/Volumes/Big Boss/Games/Hollow Knight.app/Contents/Resources/Data/Managed",
+  "AutoRemoveUnusedDeps": "Never",
+  "WarnBeforeRemovingDependents": true,
+  "UseCustomModlinks": false,
+  "CustomModlinksUri": "",
+  "UseGithubMirror": false,
+  "GithubMirrorFormat": "",
+  "PreferredLanguage": "en",
+  "LowStorageMode": false,
+  "ExtraSpaceTaken": "9 MB",
+  "RequiresWorkaroundClient": false,
+  "CacheFolder": "/Users/lukemiles/.config/HKModInstaller/HKInstallerCache"
+}

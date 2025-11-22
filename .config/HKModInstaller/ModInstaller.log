@@ -1,0 +1,100 @@
+Lumafly Information: 0 : Launching...
+    DateTime=2025-08-28T00:58:48.2926360Z
+LogHost: Initializing to normal mode (.cctor)
+Loaded app
+Opening Lumafly Version: 3.3.0.0
+Checking if up to date...
+[Binding]Error in binding to 'Avalonia.Input.KeyBinding'.'Command': 'Null value in expression '{empty}' at ''.'(KeyBinding #47530006)
+[Binding]Error in binding to 'Avalonia.Input.KeyBinding'.'Command': 'Null value in expression '{empty}' at ''.'(KeyBinding #25116876)
+[Binding]Error in binding to 'Avalonia.Input.KeyBinding'.'Command': 'Null value in expression '{empty}' at ''.'(KeyBinding #24725298)
+[Binding]Error in binding to 'Avalonia.Controls.RowDefinition'.'Height': 'Null value in expression '{empty}' at ''.'(RowDefinition #56592155)
+[Binding]Error in binding to 'Avalonia.Controls.RowDefinition'.'Height': 'Null value in expression '{empty}' at ''.'(RowDefinition #39567352)
+netsparkle: Using the following url for downloading the app cast: https://raw.githubusercontent.com/TheMulhima/Lumafly/master/appcast.xml
+Loading settings.
+Fetching links
+Fetched links successfully
+Creating service collection
+Building service provider
+Built service provider
+Displaying model
+Installer initialized
+Initializing InfoViewModel
+Initializing ModListViewModel
+Creating Items
+Items Created
+Items Selected
+ReverseDependencySearch initialized
+ModlinksChanges service created
+Reactive commands created
+Created tag and author list
+Started getting modlinks changes
+Initial API check complete
+Initializing SettingsViewModel
+SettingsViewModel Initialized
+Selected Tab 0
+Finished getting modlinks changes
+[Binding]Error in binding to 'Avalonia.Controls.ColumnDefinition'.'Width': 'Null value in expression '{empty}' at '$self.TemplatedParent'.'(ColumnDefinition #16841414)
+[Binding]Error in binding to 'Avalonia.Animation.AnimatorKeyFrame'.'Value': 'Null value in expression '{empty}' at '$parent[ProgressBar, 0]'.'(AnimatorKeyFrame #29786778)
+[Binding]Error in binding to 'Avalonia.Animation.AnimatorKeyFrame'.'Value': 'Null value in expression '{empty}' at '$parent[ProgressBar, 0]'.'(AnimatorKeyFrame #66754415)
+[Binding]Error in binding to 'Avalonia.Animation.AnimatorKeyFrame'.'Value': 'Null value in expression '{empty}' at '$parent[ProgressBar, 0]'.'(AnimatorKeyFrame #63918823)
+[Binding]Error in binding to 'Avalonia.Animation.AnimatorKeyFrame'.'Value': 'Null value in expression '{empty}' at '$parent[ProgressBar, 0]'.'(AnimatorKeyFrame #38398501)
+[Binding]Error in binding to 'Avalonia.Animation.AnimatorKeyFrame'.'Value': 'Null value in expression '{empty}' at '$parent[ProgressBar, 0]'.'(AnimatorKeyFrame #10042193)
+[Binding]Error in binding to 'Avalonia.Animation.AnimatorKeyFrame'.'Value': 'Null value in expression '{empty}' at '$parent[ProgressBar, 0]'.'(AnimatorKeyFrame #23270876)
+[Binding]Error in binding to 'Avalonia.Animation.AnimatorKeyFrame'.'Value': 'Null value in expression '{empty}' at '$parent[ProgressBar, 0]'.'(AnimatorKeyFrame #8111295)
+[Binding]Error in binding to 'Avalonia.Animation.AnimatorKeyFrame'.'Value': 'Null value in expression '{empty}' at '$parent[ProgressBar, 0]'.'(AnimatorKeyFrame #5892795)
+[Binding]Error in binding to 'Avalonia.Animation.AnimatorKeyFrame'.'Value': 'Null value in expression '{empty}' at '$parent[ProgressBar, 0]'.'(AnimatorKeyFrame #53035162)
+[Binding]Error in binding to 'Avalonia.Animation.AnimatorKeyFrame'.'Value': 'Null value in expression '{empty}' at '$parent[ProgressBar, 0]'.'(AnimatorKeyFrame #7554411)
+[Binding]Error in binding to 'Avalonia.Animation.AnimatorKeyFrame'.'Value': 'Null value in expression '{empty}' at '$parent[ProgressBar, 0]'.'(AnimatorKeyFrame #880841)
+[Binding]Error in binding to 'Avalonia.Animation.AnimatorKeyFrame'.'Value': 'Null value in expression '{empty}' at '$parent[ProgressBar, 0]'.'(AnimatorKeyFrame #7927572)
+[Binding]Error in binding to 'Avalonia.Controls.ColumnDefinition'.'Width': 'Null value in expression '{empty}' at '$self.TemplatedParent'.'(ColumnDefinition #39352775)
+[Binding]Error in binding to 'Avalonia.Animation.AnimatorKeyFrame'.'Value': 'Null value in expression '{empty}' at '$parent[ProgressBar, 0]'.'(AnimatorKeyFrame #47168081)
+[Binding]Error in binding to 'Avalonia.Animation.AnimatorKeyFrame'.'Value': 'Null value in expression '{empty}' at '$parent[ProgressBar, 0]'.'(AnimatorKeyFrame #21859552)
+[Binding]Error in binding to 'Avalonia.Animation.AnimatorKeyFrame'.'Value': 'Null value in expression '{empty}' at '$parent[ProgressBar, 0]'.'(AnimatorKeyFrame #62518240)
+[Binding]Error in binding to 'Avalonia.Animation.AnimatorKeyFrame'.'Value': 'Null value in expression '{empty}' at '$parent[ProgressBar, 0]'.'(AnimatorKeyFrame #25793251)
+[Binding]Error in binding to 'Avalonia.Animation.AnimatorKeyFrame'.'Value': 'Null value in expression '{empty}' at '$parent[ProgressBar, 0]'.'(AnimatorKeyFrame #30812675)
+[Binding]Error in binding to 'Avalonia.Animation.AnimatorKeyFrame'.'Value': 'Null value in expression '{empty}' at '$parent[ProgressBar, 0]'.'(AnimatorKeyFrame #8878624)
+[Binding]Error in binding to 'Avalonia.Animation.AnimatorKeyFrame'.'Value': 'Null value in expression '{empty}' at '$parent[ProgressBar, 0]'.'(AnimatorKeyFrame #12798755)
+[Binding]Error in binding to 'Avalonia.Animation.AnimatorKeyFrame'.'Value': 'Null value in expression '{empty}' at '$parent[ProgressBar, 0]'.'(AnimatorKeyFrame #48079933)
+[Binding]Error in binding to 'Avalonia.Animation.AnimatorKeyFrame'.'Value': 'Null value in expression '{empty}' at '$parent[ProgressBar, 0]'.'(AnimatorKeyFrame #30066215)
+[Binding]Error in binding to 'Avalonia.Animation.AnimatorKeyFrame'.'Value': 'Null value in expression '{empty}' at '$parent[ProgressBar, 0]'.'(AnimatorKeyFrame #2160482)
+[Binding]Error in binding to 'Avalonia.Animation.AnimatorKeyFrame'.'Value': 'Null value in expression '{empty}' at '$parent[ProgressBar, 0]'.'(AnimatorKeyFrame #19444344)
+[Binding]Error in binding to 'Avalonia.Animation.AnimatorKeyFrame'.'Value': 'Null value in expression '{empty}' at '$parent[ProgressBar, 0]'.'(AnimatorKeyFrame #40781368)
+Launching game
+Launching game
+Launching game
+Launching game
+[Binding]Error in binding to 'Avalonia.Controls.ColumnDefinition'.'Width': 'Null value in expression '{empty}' at '$self.TemplatedParent'.'(ColumnDefinition #26375518)
+Launching game
+Launching game
+Launching game
+Launching game
+Launching game
+Launching game
+Launching game
+Opening Lumafly Version: 3.3.0.0
+Checking if up to date...
+netsparkle: Using the following url for downloading the app cast: https://raw.githubusercontent.com/TheMulhima/Lumafly/master/appcast.xml
+Loading settings.
+Fetching links
+Fetched links successfully
+Creating service collection
+Building service provider
+Built service provider
+Displaying model
+Installer initialized
+Initializing InfoViewModel
+Initializing ModListViewModel
+Creating Items
+Initial API check complete
+Items Created
+Items Selected
+ReverseDependencySearch initialized
+ModlinksChanges service created
+Reactive commands created
+Created tag and author list
+Started getting modlinks changes
+Initializing SettingsViewModel
+SettingsViewModel Initialized
+Selected Tab 0
+Finished getting modlinks changes
+[Binding]Error in binding to 'Avalonia.Controls.ColumnDefinition'.'Width': 'Null value in expression '{empty}' at '$self.TemplatedParent'.'(ColumnDefinition #33622195)
