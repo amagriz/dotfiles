@@ -1,5 +1,5 @@
 theme = OsakaJade.conf
-macos-titlebar-style = tabs
+macos-titlebar-style = hidden
 font-size = 16
 font-family = "JetBrainsMono Nerd Font"
 background-opacity = 0.7
