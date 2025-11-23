@@ -1,8 +1,19 @@
-theme = OsakaJade.conf
+# theme
+theme = Catppuccin Mocha
+
+# window
 macos-titlebar-style = hidden
-font-size = 16
-font-family = "JetBrainsMono Nerd Font"
 background-opacity = 0.7
 background-blur = 80
-window-padding-x = 10
+window-padding-x = 14
+window-padding-y = 14
+confirm-close-surface = false
+
+# font
+font-size = 12
+font-style = Regular
+font-family = "JetBrainsMono Nerd Font"
+
+# shell
 shell-integration = zsh
+shell-integration-features = no-cursor,ssh-env
