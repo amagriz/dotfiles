@@ -1,3 +1,6 @@
+LC_CTYPE=en_US.UTF-8
+LC_ALL=en_US.UTF-8
+
 # history setup
 HISTFILE=$HOME/.zhistory
 SAVEHIST=1000
