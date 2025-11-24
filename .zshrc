@@ -10,6 +10,9 @@ setopt hist_expire_dups_first
 setopt hist_ignore_dups
 setopt hist_verify
 
+# zsh-syntax-highlighting theme
+source ~/.zsh/catppuccin_mocha-zsh-syntax-highlighting.zsh
+
 # completion using arrow keys (based on history)
 bindkey '^[[A' history-search-backward
 bindkey '^[[B' history-search-forward
@@ -25,5 +28,8 @@ eval "$(zoxide init zsh)"
 alias cd="z"
 
 eval "$(starship init zsh)"
+
+eval "$(fzf --zsh)"
+
 # Created by `pipx` on 2025-11-23 00:54:06
 export PATH="$PATH:/Users/lukemiles/.local/bin"
