@@ -1,0 +1,46 @@
+-- ~/.config/nvim/lua/plugins/catppuccin.lua
+
+return {
+  "catppuccin/nvim",
+  priority = 1000,
+  opts = {
+    flavour = "mocha", -- Example: Set flavour to "mocha"
+    transparent_background = true, -- Example: Enable transparent background
+    dim_inactive = {
+      enabled = true,
+      shade = "dark",
+      percentage = 0.2,
+    },
+    integrations = {
+      -- List specific integrations here
+      aerial = true,
+      alpha = true,
+      cmp = true,
+      dashboard = true,
+      flash = true,
+      fzf = true,
+      grug_far = true,
+      gitsigns = true,
+      headlines = true,
+      illuminate = true,
+      indent_blankline = { enabled = true },
+      leap = true,
+      lsp_trouble = true,
+      mason = true,
+      mini = true,
+      navic = { enabled = true, custom_bg = "lualine" },
+      neotest = true,
+      neotree = true,
+      noice = true,
+      notify = true,
+      snacks = true,
+      telescope = true,
+      treesitter_context = true,
+      which_key = true,
+    },
+  },
+  config = function(_, opts)
+    -- Requires Catppuccin to be enabled in the LazyVim config
+    require("catppuccin").setup(opts)
+  end,
+}
