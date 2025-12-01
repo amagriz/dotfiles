@@ -81,5 +81,8 @@ _fzf_compgen_dir() {
 # thefuck alias
 eval $(thefuck --alias)
 
+# python integration
+eval "$(pyenv init --path)"
+
 # Created by `pipx` on 2025-11-23 00:54:06
 export PATH="$PATH:/Users/lukemiles/.local/bin"
