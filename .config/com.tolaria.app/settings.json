@@ -1,0 +1,42 @@
+{
+  "auto_pull_interval_minutes": 5,
+  "git_enabled": true,
+  "git_path": null,
+  "git_provider": null,
+  "git_wsl_distro": null,
+  "autogit_enabled": false,
+  "autogit_use_ai_commit_messages": false,
+  "autogit_idle_threshold_seconds": 90,
+  "autogit_inactive_threshold_seconds": 30,
+  "auto_advance_inbox_after_organize": false,
+  "telemetry_consent": false,
+  "crash_reporting_enabled": false,
+  "analytics_enabled": false,
+  "anonymous_id": null,
+  "release_channel": null,
+  "automatic_update_checks_enabled": null,
+  "theme_mode": "dark",
+  "ui_language": null,
+  "date_display_format": "friendly",
+  "note_width_mode": "normal",
+  "sidebar_type_pluralization_enabled": true,
+  "initial_h1_auto_rename_enabled": true,
+  "ai_features_enabled": true,
+  "default_ai_agent": "antigravity",
+  "default_ai_target": "agent:antigravity",
+  "ai_model_providers": null,
+  "ai_workspace_conversations": [
+    {
+      "archived": false,
+      "id": "ai-chat-1789613153836-361ba800",
+      "model_id": null,
+      "target_id": null,
+      "title": "AI Chat"
+    }
+  ],
+  "hide_gitignored_files": true,
+  "all_notes_show_pdfs": false,
+  "all_notes_show_images": false,
+  "all_notes_show_unsupported": false,
+  "multi_workspace_enabled": false
+}

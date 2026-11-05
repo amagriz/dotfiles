@@ -1,0 +1,9 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "comet",
+  "description": "Search open tabs, bookmarks and history in Comet.",
+  "author": {
+    "name": "xjo_nd"
+  },
+  "license": "MIT"
+}

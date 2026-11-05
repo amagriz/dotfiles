@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../src/check-for-mail.tsx"],
+  "sourcesContent": ["import { closeMainWindow, showToast, Toast } from \"@raycast/api\";\nimport { runAppleScript } from \"@raycast/utils\";\n\nexport default async function CheckForMail() {\n  await closeMainWindow();\n\n  await showToast(Toast.Style.Animated, \"Checking for new mail\");\n  await runAppleScript(`\n    tell application \"Mail\"\n      repeat with acc in accounts\n        tell acc to check for new mail\n      end repeat\n    end tell\n  `);\n\n  await showToast(Toast.Style.Success, \"Loaded new messages\");\n}\n"],
+  "mappings": "yaAAA,IAAAA,EAAA,GAAAC,EAAAD,EAAA,aAAAE,IAAA,eAAAC,EAAAH,GAAA,IAAAI,EAAkD,wBAClDC,EAA+B,0BAE/B,eAAOH,GAAsC,CAC3C,QAAM,mBAAgB,EAEtB,QAAM,aAAU,QAAM,MAAM,SAAU,uBAAuB,EAC7D,QAAM,kBAAe;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA,GAMpB,EAED,QAAM,aAAU,QAAM,MAAM,QAAS,qBAAqB,CAC5D",
+  "names": ["check_for_mail_exports", "__export", "CheckForMail", "__toCommonJS", "import_api", "import_utils"]
+}

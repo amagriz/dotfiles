@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../src/tools/open-cleanup.ts"],
+  "sourcesContent": ["import { launchCommand, LaunchType } from \"@raycast/api\";\n\ntype Input = {\n  /** Which Mole command to open: clean for caches and logs, purge for development artifacts, installer for installer files, uninstall for an app, or optimize for system maintenance. */\n  command: \"clean\" | \"purge\" | \"installer\" | \"uninstall\" | \"optimize\";\n};\n\nexport default async function openCleanup({ command }: Input) {\n  if (![\"clean\", \"purge\", \"installer\", \"uninstall\", \"optimize\"].includes(command)) {\n    throw new Error(`Unknown cleanup command: ${command}`);\n  }\n\n  await launchCommand({ name: command, type: LaunchType.UserInitiated });\n  return `Opened ${command} in Raycast. Review the preview and confirm the cleanup there.`;\n}\n"],
+  "mappings": "yaAAA,IAAAA,EAAA,GAAAC,EAAAD,EAAA,aAAAE,IAAA,eAAAC,EAAAH,GAAA,IAAAI,EAA0C,wBAO1C,eAAOF,EAAmC,CAAE,QAAAG,CAAQ,EAAU,CAC5D,GAAI,CAAC,CAAC,QAAS,QAAS,YAAa,YAAa,UAAU,EAAE,SAASA,CAAO,EAC5E,MAAM,IAAI,MAAM,4BAA4BA,CAAO,EAAE,EAGvD,eAAM,iBAAc,CAAE,KAAMA,EAAS,KAAM,aAAW,aAAc,CAAC,EAC9D,UAAUA,CAAO,gEAC1B",
+  "names": ["open_cleanup_exports", "__export", "openCleanup", "__toCommonJS", "import_api", "command"]
+}

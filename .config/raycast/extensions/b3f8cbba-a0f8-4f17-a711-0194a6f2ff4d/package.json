@@ -10,7 +10,9 @@
     "madza",
     "xilopaint",
     "yug2005",
-    "ridemountainpig"
+    "ridemountainpig",
+    "0xdhrv",
+    "alexi.build"
   ],
   "license": "MIT",
   "commands": [
@@ -65,6 +67,184 @@
           "type": "text"
         }
       ]
+    }
+  ],
+  "tools": [
+    {
+      "name": "search-videos",
+      "title": "Search Videos",
+      "description": "Search YouTube videos by topic and return titles, channels, publish dates, descriptions, and watch URLs.",
+      "instructions": "Search YouTube for videos matching a query.",
+      "input": {
+        "type": "object",
+        "properties": {
+          "query": {
+            "type": "string",
+            "description": "The words or topic to search for on YouTube."
+          }
+        },
+        "required": [
+          "query"
+        ]
+      },
+      "output": {
+        "type": "array",
+        "items": {
+          "type": "object",
+          "properties": {
+            "title": {
+              "type": "string"
+            },
+            "channel": {
+              "type": "string"
+            },
+            "publishedAt": {
+              "type": "string"
+            },
+            "description": {
+              "type": "string"
+            },
+            "views": {
+              "type": "string"
+            },
+            "url": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "title",
+            "channel",
+            "publishedAt",
+            "description",
+            "views",
+            "url"
+          ]
+        }
+      },
+      "confirmation": false
+    },
+    {
+      "name": "search-channels",
+      "title": "Search Channels",
+      "description": "Search YouTube channels by name or topic and return channel details and URLs.",
+      "instructions": "Search YouTube for channels matching a query.",
+      "input": {
+        "type": "object",
+        "properties": {
+          "query": {
+            "type": "string",
+            "description": "The name or topic of the YouTube channel to find."
+          }
+        },
+        "required": [
+          "query"
+        ]
+      },
+      "output": {
+        "type": "array",
+        "items": {
+          "type": "object",
+          "properties": {
+            "title": {
+              "type": "string"
+            },
+            "description": {
+              "type": "string"
+            },
+            "subscribers": {
+              "type": "string"
+            },
+            "url": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "title",
+            "description",
+            "subscribers",
+            "url"
+          ]
+        }
+      },
+      "confirmation": false
+    },
+    {
+      "name": "search-live-streams",
+      "title": "Search Live Streams",
+      "description": "Find live YouTube streams by topic and return stream details and watch URLs.",
+      "instructions": "Search for live YouTube streams matching a query.",
+      "input": {
+        "type": "object",
+        "properties": {
+          "query": {
+            "type": "string",
+            "description": "The words or topic to search for among live YouTube streams."
+          }
+        },
+        "required": [
+          "query"
+        ]
+      },
+      "output": {
+        "type": "array",
+        "items": {
+          "type": "object",
+          "properties": {
+            "title": {
+              "type": "string"
+            },
+            "channel": {
+              "type": "string"
+            },
+            "description": {
+              "type": "string"
+            },
+            "url": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "title",
+            "channel",
+            "description",
+            "url"
+          ]
+        }
+      },
+      "confirmation": false
+    },
+    {
+      "name": "get-popular-videos",
+      "title": "Get Popular Videos",
+      "description": "Get currently popular YouTube videos with titles, channels, view counts, and watch URLs.",
+      "instructions": "Get videos from YouTube's current most popular chart.",
+      "output": {
+        "type": "array",
+        "items": {
+          "type": "object",
+          "properties": {
+            "title": {
+              "type": "string"
+            },
+            "channel": {
+              "type": "string"
+            },
+            "views": {
+              "type": "string"
+            },
+            "url": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "title",
+            "channel",
+            "views",
+            "url"
+          ]
+        }
+      },
+      "confirmation": false
     }
   ],
   "preferences": [
@@ -153,21 +333,21 @@
     }
   ],
   "dependencies": {
-    "@googleapis/youtube": "^29.0.0",
-    "@raycast/api": "^1.103.3",
-    "@raycast/utils": "^2.2.1",
+    "@googleapis/youtube": "^33.0.0",
+    "@raycast/api": "^1.104.20",
+    "@raycast/utils": "^2.2.6",
     "duration-iso-8601": "^1.1.0",
     "he": "^1.2.0",
-    "javascript-time-ago": "^2.3.10"
+    "javascript-time-ago": "^2.6.4"
   },
   "devDependencies": {
     "@raycast/eslint-config": "^2.1.1",
-    "@types/he": "^1.1.2",
-    "@types/node": "22.13.10",
-    "@types/react": "19.0.10",
-    "eslint": "^9.37.0",
-    "prettier": "^3.6.2",
-    "typescript": "^5.9.3"
+    "@types/he": "^1.2.3",
+    "@types/node": "26.0.1",
+    "@types/react": "19.2.17",
+    "eslint": "^9.0.0",
+    "prettier": "^3.8.4",
+    "typescript": "^6.0.3"
   },
   "scripts": {
     "build": "ray build -e dist",
@@ -179,5 +359,104 @@
   "platforms": [
     "macOS",
     "Windows"
-  ]
+  ],
+  "ai": {
+    "instructions": "Use YouTube search results to answer questions about videos, channels, and live streams.\nInclude a YouTube link when recommending a video or channel. Do not claim to know\nwhat a video says based only on its title or description.\n",
+    "evals": [
+      {
+        "input": "@youtube Find videos about beginner sourdough baking",
+        "mocks": {
+          "search-videos": [
+            {
+              "title": "Sourdough for Beginners",
+              "channel": "Bread School",
+              "description": "A beginner guide to baking sourdough.",
+              "url": "https://www.youtube.com/watch?v=abc123"
+            }
+          ]
+        },
+        "expected": [
+          {
+            "callsTool": {
+              "name": "search-videos",
+              "arguments": {
+                "query": {
+                  "includes": "sourdough"
+                }
+              }
+            }
+          },
+          {
+            "includes": "https://www.youtube.com/watch?v=abc123"
+          }
+        ]
+      },
+      {
+        "input": "@youtube Find the Bread School channel",
+        "mocks": {
+          "search-channels": [
+            {
+              "title": "Bread School",
+              "url": "https://www.youtube.com/channel/UC123"
+            }
+          ]
+        },
+        "expected": [
+          {
+            "callsTool": {
+              "name": "search-channels",
+              "arguments": {
+                "query": {
+                  "includes": "Bread School"
+                }
+              }
+            }
+          },
+          {
+            "includes": "https://www.youtube.com/channel/UC123"
+          }
+        ]
+      },
+      {
+        "input": "@youtube Find a live stream about space launches",
+        "mocks": {
+          "search-live-streams": [
+            {
+              "title": "Live Rocket Launch",
+              "channel": "Space Channel",
+              "url": "https://www.youtube.com/watch?v=live123"
+            }
+          ]
+        },
+        "expected": [
+          {
+            "callsTool": "search-live-streams"
+          },
+          {
+            "includes": "https://www.youtube.com/watch?v=live123"
+          }
+        ]
+      },
+      {
+        "input": "@youtube What videos are popular right now?",
+        "mocks": {
+          "get-popular-videos": [
+            {
+              "title": "Popular Video",
+              "channel": "Example Channel",
+              "url": "https://www.youtube.com/watch?v=popular123"
+            }
+          ]
+        },
+        "expected": [
+          {
+            "callsTool": "get-popular-videos"
+          },
+          {
+            "includes": "https://www.youtube.com/watch?v=popular123"
+          }
+        ]
+      }
+    ]
+  }
 }

@@ -1,0 +1,9 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "keepassxc",
+  "description": "Access a KeePass database through KeePassXC.",
+  "author": {
+    "name": "pabroux"
+  },
+  "license": "MIT"
+}

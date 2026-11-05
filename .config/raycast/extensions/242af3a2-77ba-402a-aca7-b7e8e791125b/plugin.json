@@ -1,0 +1,9 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "keyboard-brightness",
+  "description": "Easily Control Keyboard Brightness on your Apple Silicon MacBook",
+  "author": {
+    "name": "huzef44"
+  },
+  "license": "MIT"
+}

@@ -1,0 +1,9 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "apple-notes",
+  "description": "Search and create notes within the Apple Notes application.",
+  "author": {
+    "name": "tumtum"
+  },
+  "license": "MIT"
+}

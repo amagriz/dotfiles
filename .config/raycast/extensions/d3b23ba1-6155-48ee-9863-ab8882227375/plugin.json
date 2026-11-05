@@ -1,0 +1,9 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "dia",
+  "description": "Search your open tabs and browsing history in Dia",
+  "author": {
+    "name": "tleo19"
+  },
+  "license": "MIT"
+}

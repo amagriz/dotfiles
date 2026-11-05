@@ -1,0 +1,9 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "browser-tabs",
+  "description": "Search and open tabs in Chrome, Safari, Edge, Arc, Brave, Vivaldi, Opera and Orion, etc.",
+  "author": {
+    "name": "koinzhang"
+  },
+  "license": "MIT"
+}

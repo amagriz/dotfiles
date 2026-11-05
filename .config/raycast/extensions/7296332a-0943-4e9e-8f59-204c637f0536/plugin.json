@@ -1,0 +1,13 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "wi-fi",
+  "description": "Check and toggle Wi-Fi via Raycast.",
+  "author": {
+    "name": "koinzhang"
+  },
+  "license": "MIT",
+  "keywords": [
+    "wifi",
+    "network"
+  ]
+}

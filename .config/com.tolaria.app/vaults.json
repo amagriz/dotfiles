@@ -1,0 +1,16 @@
+{
+  "vaults": [
+    {
+      "label": "Getting Started",
+      "path": "/Users/lukemiles/dotfiles/Getting Started",
+      "alias": null,
+      "shortLabel": null,
+      "color": null,
+      "icon": null,
+      "mounted": true
+    }
+  ],
+  "active_vault": "/Users/lukemiles/dotfiles/Getting Started",
+  "default_workspace_path": "/Users/lukemiles/dotfiles/Getting Started",
+  "hidden_defaults": []
+}

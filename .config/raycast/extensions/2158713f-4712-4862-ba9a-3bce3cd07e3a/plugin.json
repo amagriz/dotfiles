@@ -1,0 +1,17 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "audio-device",
+  "description": "Switch the active audio device of your mac.",
+  "author": {
+    "name": "benvp"
+  },
+  "license": "MIT",
+  "keywords": [
+    "sound",
+    "manager",
+    "bluetooth",
+    "volume",
+    "mute",
+    "audio"
+  ]
+}

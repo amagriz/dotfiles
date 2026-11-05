@@ -1,0 +1,7 @@
+"use strict";var E=Object.create;var a=Object.defineProperty;var l=Object.getOwnPropertyDescriptor;var y=Object.getOwnPropertyNames;var u=Object.getPrototypeOf,I=Object.prototype.hasOwnProperty;var P=(e,r)=>{for(var t in r)a(e,t,{get:r[t],enumerable:!0})},c=(e,r,t,i)=>{if(r&&typeof r=="object"||typeof r=="function")for(let s of y(r))!I.call(e,s)&&s!==t&&a(e,s,{get:()=>r[s],enumerable:!(i=l(r,s))||i.enumerable});return e};var h=(e,r,t)=>(t=e!=null?E(u(e)):{},c(r||!e||!e.__esModule?a(t,"default",{value:e,enumerable:!0}):t,e)),w=e=>c(a({},"__esModule",{value:!0}),e);var b={};P(b,{default:()=>M});module.exports=w(b);var p=require("@raycast/utils");var n=require("os"),o=require("path"),d=require("fs/promises"),m=h(require("plist")),S=(0,o.resolve)((0,n.homedir)(),"Library/Mail/PersistenceInfo.plist");async function L(){try{let e=await(0,d.readFile)(S,"utf8");return m.default.parse(e)}catch(e){let r=e instanceof Error?e.message:String(e);throw new Error(`Failed to read Mail persistence info: ${r}`)}}async function f(){try{let e=await L();return(0,o.resolve)((0,n.homedir)(),"Library/Mail",e.LastUsedVersionDirectoryName,"MailData/Envelope Index")}catch(e){let r=e instanceof Error?e.message:String(e);throw new Error(`Failed to get Mail database path: ${r}`)}}async function g(e){let r=await f(),t=`
+SELECT 
+address,
+comment as name
+FROM addresses
+${e?`WHERE address LIKE '%${e}%'`:""};
+`;return await(0,p.executeSQL)(r,t)}async function M(e){return await g(e.query)}

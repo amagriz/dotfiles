@@ -1,0 +1,9 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "cleanshotx",
+  "description": "Capture and record your screen!",
+  "author": {
+    "name": "Aayush9029"
+  },
+  "license": "MIT"
+}

@@ -1,0 +1,9 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "mail",
+  "description": "Extension for Apple Mail.",
+  "author": {
+    "name": "yug2005"
+  },
+  "license": "MIT"
+}

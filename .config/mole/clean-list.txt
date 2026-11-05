@@ -1,0 +1,685 @@
+# Mole Cleanup Preview - 2026-09-14 12:25:57
+#
+# How to protect files:
+# 1. Copy any path below to ~/.config/mole/whitelist
+# 2. Run: mo clean --whitelist
+#
+# Example:
+#   /Users/*/Library/Caches/com.example.app
+#
+
+
+=== User essentials ===
+/Users/lukemiles/Library/Caches/@granolaelectron-updater  # 291.1MB
+/Users/lukemiles/Library/Caches/AMSDataMigratorTool  # 0B
+/Users/lukemiles/Library/Caches/Animoji  # 1.3MB
+/Users/lukemiles/Library/Caches/CCTClearcutLogger  # 242KB
+/Users/lukemiles/Library/Caches/CrashReporter  # 672KB
+/Users/lukemiles/Library/Caches/Dia  # 1.00GB
+/Users/lukemiles/Library/Caches/GIPPseudonymousID  # 4KB
+/Users/lukemiles/Library/Caches/GOG Sp. z o.o.  # 0B
+/Users/lukemiles/Library/Caches/GameKit  # 49KB
+/Users/lukemiles/Library/Caches/GeoServices  # 100.7MB
+/Users/lukemiles/Library/Caches/Google  # 627.0MB
+/Users/lukemiles/Library/Caches/Homebrew  # 45.0MB
+/Users/lukemiles/Library/Caches/INSTALLATION  # 1KB
+/Users/lukemiles/Library/Caches/JNA  # 0B
+/Users/lukemiles/Library/Caches/PHTPhenotype  # 1.3MB
+/Users/lukemiles/Library/Caches/PassKit  # 4.0MB
+/Users/lukemiles/Library/Caches/Plex  # 255.0MB
+/Users/lukemiles/Library/Caches/PlexTraktSync  # 131KB
+/Users/lukemiles/Library/Caches/SentryCrash  # 49KB
+/Users/lukemiles/Library/Caches/Steam  # 272.2MB
+/Users/lukemiles/Library/Caches/Updater  # 0B
+/Users/lukemiles/Library/Caches/appsflyer-v1  # 0B
+/Users/lukemiles/Library/Caches/calibre  # 3.8MB
+/Users/lukemiles/Library/Caches/calibre-ebook.com  # 0B
+/Users/lukemiles/Library/Caches/com.chabomakers.Antinote  # 0B
+/Users/lukemiles/Library/Caches/com.crashlytics.data  # 512KB
+/Users/lukemiles/Library/Caches/com.datadoghq  # 4KB
+/Users/lukemiles/Library/Caches/com.granola.app.ShipIt  # 8KB
+/Users/lukemiles/Library/Caches/com.plausiblelabs.crashreporter.data  # 0B
+/Users/lukemiles/Library/Caches/com.ranchero.NetNewsWire-Evergreen  # 0B
+/Users/lukemiles/Library/Caches/com.xamarin.fontconfig  # 1.5MB
+/Users/lukemiles/Library/Caches/familycircled  # 2.3MB
+/Users/lukemiles/Library/Caches/flutter_engine  # 410KB
+/Users/lukemiles/Library/Caches/google-sdks-events  # 242KB
+/Users/lukemiles/Library/Caches/io.sentry  # 16KB
+/Users/lukemiles/Library/Caches/linecast  # 17.3MB
+/Users/lukemiles/Library/Caches/nucleus  # 328KB
+/Users/lukemiles/Library/Caches/pip  # 7.4MB
+/Users/lukemiles/Library/Caches/pipx  # 4KB
+/Users/lukemiles/Library/Caches/segment  # 0B
+/Users/lukemiles/Library/Caches/ssu  # 0B
+/Users/lukemiles/Library/Caches/storedownloadd  # 504KB
+/Users/lukemiles/Library/Caches/telemetrysignalcache  # 1KB
+/Users/lukemiles/Library/Caches/thumbnail-generator-crashes.plist  # 1KB
+/Users/lukemiles/Library/Caches/tlrc  # 30.5MB
+/Users/lukemiles/Library/Logs/Plex  # 34.8MB
+/Users/lukemiles/Library/Logs/pipx  # 45KB
+/Users/lukemiles/Library/Logs/nexon  # 17.1MB
+/Users/lukemiles/Library/Logs/poncle  # 53KB
+/Users/lukemiles/Library/Logs/Baseband  # 0B
+/Users/lukemiles/Library/Logs/Homebrew  # 0B
+/Users/lukemiles/Library/Logs/Assistant  # 0B
+/Users/lukemiles/Library/Logs/Kenny Sun  # 86KB
+/Users/lukemiles/Library/Logs/EVE Online  # 4KB
+/Users/lukemiles/Library/Logs/AppAnalytics  # 188KB
+/Users/lukemiles/Library/Logs/fsck_hfs.log  # 31KB
+/Users/lukemiles/Library/Logs/CrashReporter  # 12KB
+/Users/lukemiles/Library/Logs/PlexTraktSync  # 5.5MB
+/Users/lukemiles/Library/Logs/xlog_logitech  # 0B
+/Users/lukemiles/Library/Logs/SiriTTSService  # 0B
+/Users/lukemiles/Library/Logs/CommanderOne.log  # 4KB
+/Users/lukemiles/Library/Logs/AMPLITUDE Studios  # 106KB
+/Users/lukemiles/Library/Logs/DiagnosticReports  # 565KB
+/Users/lukemiles/Library/Logs/DiscRecording.log  # 1KB
+/Users/lukemiles/Library/Logs/steam-rom-manager  # 4KB
+/Users/lukemiles/Library/Logs/PhotosSearch.aapbz  # 13KB
+/Users/lukemiles/Library/Logs/PhotosUpgrade.aapbz  # 8KB
+/Users/lukemiles/Library/Logs/GOG Galaxy Overlay_debug.log  # 1KB
+/Users/lukemiles/Library/Logs/PrivacyPreservingMeasurement  # 0B
+/Users/lukemiles/Library/Logs/mole
+[0;90mPress Enter to return to the app list, press q to exit (4)[0m   # 0B
+
+=== App caches ===
+/Users/lukemiles/Library/Suggestions/Metrics  # 1.2MB
+/Users/lukemiles/Library/Suggestions/journals  # 0B
+/Users/lukemiles/Library/Suggestions/Harvesting  # 5.9MB
+/Users/lukemiles/Library/Suggestions/email-to-name.kvcache  # 0B
+/Users/lukemiles/Library/Suggestions/phone-to-name.kvcache  # 0B
+/Users/lukemiles/Library/Suggestions/privacyAwareLogging.ser  # 1KB
+/Users/lukemiles/Library/Suggestions/chatLengthEstimator.cmsketch  # 16KB
+/Users/lukemiles/Library/Suggestions/suggestions-device-day-group  # 1KB
+/Users/lukemiles/Library/Suggestions/significant-pseudo-contacts.bf.bf2-head  # 50KB
+/Users/lukemiles/Library/Suggestions/significant-pseudo-contacts.bf.bf2-tail  # 50KB
+/Users/lukemiles/Library/Application Support/CrashReporter/BALL x PIT Demo_CBD85F90-1EA1-55B4-B6CD-E10F505032B2.plist  # 4KB
+/Users/lukemiles/Library/Application Support/CrashReporter/Hades II_CBD85F90-1EA1-55B4-B6CD-E10F505032B2.plist  # 4KB
+/Users/lukemiles/Library/Application Support/CrashReporter/Google Chrome_CBD85F90-1EA1-55B4-B6CD-E10F505032B2.plist  # 4KB
+/Users/lukemiles/Library/Application Support/CrashReporter/scimitar_CBD85F90-1EA1-55B4-B6CD-E10F505032B2.plist  # 4KB
+/Users/lukemiles/Library/Application Support/CrashReporter/1Password_CBD85F90-1EA1-55B4-B6CD-E10F505032B2.plist  # 4KB
+/Users/lukemiles/Library/Application Support/CrashReporter/ES2_CBD85F90-1EA1-55B4-B6CD-E10F505032B2.plist  # 4KB
+/Users/lukemiles/Library/Application Support/CrashReporter/Total War SHOGUN 2_CBD85F90-1EA1-55B4-B6CD-E10F505032B2.plist  # 4KB
+/Users/lukemiles/Library/Application Support/CrashReporter/ruby_CBD85F90-1EA1-55B4-B6CD-E10F505032B2.plist  # 4KB
+/Users/lukemiles/Library/Application Support/CrashReporter/Cyberpunk2077_CBD85F90-1EA1-55B4-B6CD-E10F505032B2.plist  # 4KB
+/Users/lukemiles/Library/Application Support/CrashReporter/suggestd_CBD85F90-1EA1-55B4-B6CD-E10F505032B2.plist  # 4KB
+/Users/lukemiles/Library/Application Support/CrashReporter/victoria3_CBD85F90-1EA1-55B4-B6CD-E10F505032B2.plist  # 4KB
+/Users/lukemiles/Library/Application Support/CrashReporter/CampoRemoteService_CBD85F90-1EA1-55B4-B6CD-E10F505032B2.plist  # 4KB
+/Users/lukemiles/Library/Application Support/CrashReporter/Spotify_CBD85F90-1EA1-55B4-B6CD-E10F505032B2.plist  # 4KB
+/Users/lukemiles/Library/Messages/Caches/Previews/Attachments/00  # 807KB
+/Users/lukemiles/Library/Messages/Caches/Previews/Attachments/02  # 770KB
+/Users/lukemiles/Library/Messages/Caches/Previews/Attachments/10  # 770KB
+/Users/lukemiles/Library/Messages/Caches/Previews/Attachments/31  # 291KB
+/Users/lukemiles/Library/Messages/Caches/Previews/Attachments/35  # 770KB
+/Users/lukemiles/Library/Messages/Caches/Previews/Attachments/44  # 1.5MB
+/Users/lukemiles/Library/Messages/Caches/Previews/Attachments/62  # 770KB
+/Users/lukemiles/Library/Messages/Caches/Previews/Attachments/67  # 770KB
+/Users/lukemiles/Library/Messages/Caches/Previews/Attachments/88  # 770KB
+/Users/lukemiles/Library/Messages/Caches/Previews/Attachments/99  # 770KB
+/Users/lukemiles/Library/Messages/Caches/Previews/Attachments/9c  # 770KB
+/Users/lukemiles/Library/Messages/Caches/Previews/Attachments/a8  # 770KB
+/Users/lukemiles/Library/Messages/Caches/Previews/Attachments/ac  # 770KB
+/Users/lukemiles/Library/Messages/Caches/Previews/Attachments/b6  # 770KB
+/Users/lukemiles/Library/Messages/Caches/Previews/Attachments/d1  # 770KB
+/Users/lukemiles/Library/Messages/Caches/Previews/Attachments/d7  # 770KB
+/Users/lukemiles/Library/Messages/Caches/Previews/Attachments/da  # 770KB
+/Users/lukemiles/Library/Messages/Caches/Previews/Attachments/dc  # 770KB
+/Users/lukemiles/Library/Messages/Caches/Previews/Attachments/ef  # 770KB
+/Users/lukemiles/Library/Messages/Caches/Previews/Attachments/f0  # 770KB
+/Users/lukemiles/Library/Messages/Caches/Previews/Attachments/fd  # 291KB
+/Users/lukemiles/Library/Containers/com.apple.mediaanalysisd/Data/tmp/Pissarro  # 7.5MB
+/Users/lukemiles/Library/Containers/com.apple.mediaanalysisd/Data/tmp/MediaCache  # 4KB
+/Users/lukemiles/Library/Containers/com.apple.mediaanalysisd/Data/tmp/TemporaryItems  # 0B
+/Users/lukemiles/Library/Containers/com.apple.mediaanalysisd/Data/tmp/com.apple.mediaanalysis  # 0B
+/Users/lukemiles/Library/Containers/com.apple.wallpaper.extension.aerials/Data/tmp/TemporaryItems  # 0B
+/Users/lukemiles/Library/Containers/com.apple.geod/Data/tmp/01FB91E9-5EEA-4488-8BE0-D1368266D7E5  # 318KB
+/Users/lukemiles/Library/Containers/com.apple.geod/Data/tmp/047B7DD5-59E0-4CE5-8FC0-782E2746CF4A  # 0B
+/Users/lukemiles/Library/Containers/com.apple.geod/Data/tmp/04D473CD-278E-4394-9CCE-6020E79E96A0  # 318KB
+/Users/lukemiles/Library/Containers/com.apple.geod/Data/tmp/056FD5C0-6FDE-40A1-8992-0D8930C0B18A  # 0B
+/Users/lukemiles/Library/Containers/com.apple.geod/Data/tmp/059AB29B-2E34-4515-99FE-B571645BED14  # 0B
+/Users/lukemiles/Library/Containers/com.apple.geod/Data/tmp/0AB771EF-27A9-43ED-B4DE-CBED891DC624  # 0B
+/Users/lukemiles/Library/Containers/com.apple.geod/Data/tmp/0C2664F1-0F4D-43E9-B2F9-05DB703B986B  # 288KB
+/Users/lukemiles/Library/Containers/com.apple.geod/Data/tmp/0FC34963-12E7-4688-92D8-FFD7A46C678C  # 316KB
+/Users/lukemiles/Library/Containers/com.apple.geod/Data/tmp/109EEC3D-F00B-4545-BDA9-1F889494DE13  # 318KB
+/Users/lukemiles/Library/Containers/com.apple.geod/Data/tmp/11B48F50-76EF-4871-8032-1DD3563E15EE  # 287KB
+/Users/lukemiles/Library/Containers/com.apple.geod/Data/tmp/12D76386-0290-4C17-98A8-89F752A6B208  # 0B
+/Users/lukemiles/Library/Containers/com.apple.geod/Data/tmp/138986CB-E45F-4263-9A93-BF8911DA1711  # 0B
+/Users/lukemiles/Library/Containers/com.apple.geod/Data/tmp/14DE0964-A872-4E28-9C73-15483353EB8B  # 288KB
+/Users/lukemiles/Library/Containers/com.apple.geod/Data/tmp/154101C2-C3A1-4482-A0A6-E87F8E808282  # 318KB
+/Users/lukemiles/Library/Containers/com.apple.geod/Data/tmp/169DD2F9-9CA8-4814-ACFE-E218A65FECF5  # 288KB
+/Users/lukemiles/Library/Containers/com.apple.geod/Data/tmp/17093247-532F-4E0B-97B7-40500C101A92  # 0B
+/Users/lukemiles/Library/Containers/com.apple.geod/Data/tmp/17F19EE8-9ABC-491D-95DC-B9464CB321B6  # 318KB
+/Users/lukemiles/Library/Containers/com.apple.geod/Data/tmp/18153DC4-D008-4929-B772-3AA9103EE676  # 316KB
+/Users/lukemiles/Library/Containers/com.apple.geod/Data/tmp/18871239-D920-4D0F-B579-B4605ABD2EC6  # 1.2MB
+/Users/lukemiles/Library/Containers/com.apple.geod/Data/tmp/190E70F8-0D12-43C5-B08B-6E40E90EC12B  # 316KB
+/Users/lukemiles/Library/Containers/com.apple.geod/Data/tmp/1E660157-97F7-41F7-B08F-182171B7E64C  # 316KB
+/Users/lukemiles/Library/Containers/com.apple.geod/Data/tmp/1E8EB0F1-8016-4FBE-87C5-8D2830DC609D  # 0B
+/Users/lukemiles/Library/Containers/com.apple.geod/Data/tmp/1F9F766D-02CA-45EC-BE3A-C5837962B5B9  # 318KB
+/Users/lukemiles/Library/Containers/com.apple.geod/Data/tmp/20EA6035-B7D2-4048-8BBD-105812439D9A  # 316KB
+/Users/lukemiles/Library/Containers/com.apple.geod/Data/tmp/289F64CC-E355-4F10-AEA3-DA8D0A308C9C  # 0B
+/Users/lukemiles/Library/Containers/com.apple.geod/Data/tmp/2960906A-EE3F-4127-9252-F6CD9998886D  # 318KB
+/Users/lukemiles/Library/Containers/com.apple.geod/Data/tmp/2FC74F62-A903-43A5-B29D-1B75074FBB28  # 0B
+/Users/lukemiles/Library/Containers/com.apple.geod/Data/tmp/33C57F62-E382-4188-91A7-943CE326C5B1  # 288KB
+/Users/lukemiles/Library/Containers/com.apple.geod/Data/tmp/3B0DB4B6-14D6-4955-A815-E773DA2FFA4A  # 288KB
+/Users/lukemiles/Library/Containers/com.apple.geod/Data/tmp/3B7ABB76-3CBD-4AB4-9696-C6F191D89EEE  # 0B
+/Users/lukemiles/Library/Containers/com.apple.geod/Data/tmp/3CDD10F6-6B6C-4A31-9D34-426D6466543B  # 316KB
+/Users/lukemiles/Library/Containers/com.apple.geod/Data/tmp/40437E64-6692-41CD-963B-6A557989222A  # 0B
+/Users/lukemiles/Library/Containers/com.apple.geod/Data/tmp/43909B5A-5697-40B1-ADC3-3A31BC360E40  # 0B
+/Users/lukemiles/Library/Containers/com.apple.geod/Data/tmp/43D87560-0FA5-4DF9-B62B-11EE4BD6F14C  # 0B
+/Users/lukemiles/Library/Containers/com.apple.geod/Data/tmp/4C91C96E-BDE0-47DC-BC47-65DB27DD186D  # 0B
+/Users/lukemiles/Library/Containers/com.apple.geod/Data/tmp/4D862F8C-83B0-47A7-A096-74D4A411FAB9  # 288KB
+/Users/lukemiles/Library/Containers/com.apple.geod/Data/tmp/51644E4F-EC97-4342-B8BD-2205B3C5E288  # 0B
+/Users/lukemiles/Library/Containers/com.apple.geod/Data/tmp/59D4FAA7-9E60-4B02-AC67-CBAAA4536B16  # 288KB
+/Users/lukemiles/Library/Containers/com.apple.geod/Data/tmp/5BB25FB5-2733-43A3-82D3-E1DC75D1B81D  # 316KB
+/Users/lukemiles/Library/Containers/com.apple.geod/Data/tmp/5C3C8395-4934-4BA9-B172-A41F9C5CC5B2  # 0B
+/Users/lukemiles/Library/Containers/com.apple.geod/Data/tmp/5CB207B5-0557-4F94-A370-4A87DFBCCE5A  # 318KB
+/Users/lukemiles/Library/Containers/com.apple.geod/Data/tmp/5D1EE858-17D3-4FE8-B99D-564550BE9E1D  # 0B
+/Users/lukemiles/Library/Containers/com.apple.geod/Data/tmp/5D218582-2BBE-4795-A73D-BC32AA4CEDC2  # 316KB
+/Users/lukemiles/Library/Containers/com.apple.geod/Data/tmp/5E2BDF45-F463-4598-B458-F9DBEAC93F44  # 0B
+/Users/lukemiles/Library/Containers/com.apple.geod/Data/tmp/6167BCD8-20A4-4CCD-848D-53D4E7A7FA66  # 0B
+/Users/lukemiles/Library/Containers/com.apple.geod/Data/tmp/61814881-38D7-4259-93E9-1CFFA2EE07A9  # 0B
+/Users/lukemiles/Library/Containers/com.apple.geod/Data/tmp/61828198-F50A-41F6-9141-BABB7CE803E3  # 318KB
+/Users/lukemiles/Library/Containers/com.apple.geod/Data/tmp/63151878-5D3E-48CC-8A7B-E413411E0DEC  # 318KB
+/Users/lukemiles/Library/Containers/com.apple.geod/Data/tmp/66369D36-5FD9-4256-A32B-A1A66AEEB665  # 0B
+/Users/lukemiles/Library/Containers/com.apple.geod/Data/tmp/677DD788-35A0-4F8C-8782-1A72896155C9  # 0B
+/Users/lukemiles/Library/Containers/com.apple.geod/Data/tmp/684FACE7-ABF1-45AE-9A63-A95486BD8EA8  # 288KB
+/Users/lukemiles/Library/Containers/com.apple.geod/Data/tmp/6A227955-ACC2-406C-AD27-B7384237D25C  # 318KB
+/Users/lukemiles/Library/Containers/com.apple.geod/Data/tmp/71BADE25-1AF2-4287-A3F4-6928883F7E74  # 316KB
+/Users/lukemiles/Library/Containers/com.apple.geod/Data/tmp/71E676A0-FF1E-4D0F-8F13-CB1445FFF790  # 318KB
+/Users/lukemiles/Library/Containers/com.apple.geod/Data/tmp/77450446-3BEA-4C9D-BC06-24369C61795F  # 318KB
+/Users/lukemiles/Library/Containers/com.apple.geod/Data/tmp/7B17EF2E-2800-4662-80CD-1DB71BCDCA0B  # 318KB
+/Users/lukemiles/Library/Containers/com.apple.geod/Data/tmp/87CC84F2-800F-439C-B1CB-A888C4CD6475  # 1.2MB
+/Users/lukemiles/Library/Containers/com.apple.geod/Data/tmp/8C3BDBC1-34B8-4C1D-96C1-1E480DA21854  # 288KB
+/Users/lukemiles/Library/Containers/com.apple.geod/Data/tmp/8E46E4B1-5C8E-43B0-807A-D275F0762715  # 0B
+/Users/lukemiles/Library/Containers/com.apple.geod/Data/tmp/91051D68-9723-49FF-A7A4-26A0DE97407D  # 316KB
+/Users/lukemiles/Library/Containers/com.apple.geod/Data/tmp/97E4C9BA-ADD0-4445-8138-5BFF6311B6CF  # 0B
+/Users/lukemiles/Library/Containers/com.apple.geod/Data/tmp/9984A86A-46DC-4848-9BDE-29B41E097B9D  # 316KB
+/Users/lukemiles/Library/Containers/com.apple.geod/Data/tmp/9BF55A9A-57A4-4AF1-80AF-1612513A6BC6  # 318KB
+/Users/lukemiles/Library/Containers/com.apple.geod/Data/tmp/9D4942A4-0B80-49C4-81FE-FF3640EEF7D1  # 318KB
+/Users/lukemiles/Library/Containers/com.apple.geod/Data/tmp/9F3217BF-97F9-4131-B2F0-51DC173DDBD3  # 318KB
+/Users/lukemiles/Library/Containers/com.apple.geod/Data/tmp/AA1127B9-1BB5-4FED-8573-F772AEEBF412  # 0B
+/Users/lukemiles/Library/Containers/com.apple.geod/Data/tmp/B01B16BC-47E8-4CAE-B261-AB958CE923BD  # 318KB
+/Users/lukemiles/Library/Containers/com.apple.geod/Data/tmp/B3BB1C43-D3E1-4171-8B29-C4FB356DA3EB  # 316KB
+/Users/lukemiles/Library/Containers/com.apple.geod/Data/tmp/B61AB588-0643-4B56-9FAF-22906B07EA18  # 0B
+/Users/lukemiles/Library/Containers/com.apple.geod/Data/tmp/B7C15698-F26B-4079-BBCA-CC9068187527  # 316KB
+/Users/lukemiles/Library/Containers/com.apple.geod/Data/tmp/B8DBEC74-E30A-49D4-8160-FC4E73BCCA77  # 288KB
+/Users/lukemiles/Library/Containers/com.apple.geod/Data/tmp/B92CB57F-33AB-4D50-9633-DA9182ED6F80  # 287KB
+/Users/lukemiles/Library/Containers/com.apple.geod/Data/tmp/B9CC2D4E-F9F5-4AE6-AFF6-4833355DC079  # 0B
+/Users/lukemiles/Library/Containers/com.apple.geod/Data/tmp/BC1BCB0E-2D9D-4D33-820E-5844181975D9  # 288KB
+/Users/lukemiles/Library/Containers/com.apple.geod/Data/tmp/C0479A70-205E-4485-85C7-5CB6871B2AD9  # 0B
+/Users/lukemiles/Library/Containers/com.apple.geod/Data/tmp/C0A63E54-F4C9-4578-A1C9-C6CF0ED3A25A  # 0B
+/Users/lukemiles/Library/Containers/com.apple.geod/Data/tmp/C15A4043-942D-4EAF-BAAF-550732EAFF61  # 318KB
+/Users/lukemiles/Library/Containers/com.apple.geod/Data/tmp/C68626FC-9EDE-43C5-A374-D74965BAB09C  # 316KB
+/Users/lukemiles/Library/Containers/com.apple.geod/Data/tmp/C796DE26-FD7B-4744-B904-C02D298DD969  # 318KB
+/Users/lukemiles/Library/Containers/com.apple.geod/Data/tmp/C89258B7-5D0D-435E-9C4C-A1D078E61B32  # 318KB
+/Users/lukemiles/Library/Containers/com.apple.geod/Data/tmp/CD02C475-EE3C-44D1-9EEC-6B9DB9B7DDB0  # 0B
+/Users/lukemiles/Library/Containers/com.apple.geod/Data/tmp/CD0DEC27-05F2-4822-916B-56B5E07F7E49  # 288KB
+/Users/lukemiles/Library/Containers/com.apple.geod/Data/tmp/CF21FE88-93E4-4720-B02C-A81BEB77723E  # 0B
+/Users/lukemiles/Library/Containers/com.apple.geod/Data/tmp/D22AC0D0-6C9C-46E2-9D4D-E75082FE3B68  # 316KB
+/Users/lukemiles/Library/Containers/com.apple.geod/Data/tmp/D5F9ACD0-89AE-4CB5-99EB-B03EDD2767AC  # 288KB
+/Users/lukemiles/Library/Containers/com.apple.geod/Data/tmp/D7016464-EC8F-4684-83B5-0A8D7FE7134E  # 0B
+/Users/lukemiles/Library/Containers/com.apple.geod/Data/tmp/D7F11D96-0D8F-4B5D-9450-FBAD2B0501E3  # 318KB
+/Users/lukemiles/Library/Containers/com.apple.geod/Data/tmp/D83D4B70-7B82-45DB-B9E7-20BE13150496  # 318KB
+/Users/lukemiles/Library/Containers/com.apple.geod/Data/tmp/DA374686-D319-4966-9EFE-2A3F12CEA5DF  # 0B
+/Users/lukemiles/Library/Containers/com.apple.geod/Data/tmp/DAF1DE71-632F-4288-BD17-B5C2F927AB6A  # 287KB
+/Users/lukemiles/Library/Containers/com.apple.geod/Data/tmp/DF8B54A8-D650-4957-882A-6ED2BA5275D5  # 316KB
+/Users/lukemiles/Library/Containers/com.apple.geod/Data/tmp/E3447512-2C51-466B-9F92-29DE492CF6A4  # 316KB
+/Users/lukemiles/Library/Containers/com.apple.geod/Data/tmp/E3FDB084-D4F6-43A2-A58C-2419BFCB7C3B  # 318KB
+/Users/lukemiles/Library/Containers/com.apple.geod/Data/tmp/E4BAECA8-166E-4A1C-8D64-D9F57E1E6F1A  # 0B
+/Users/lukemiles/Library/Containers/com.apple.geod/Data/tmp/E52744AB-188A-45DB-9CDE-C56CF6F28E94  # 0B
+/Users/lukemiles/Library/Containers/com.apple.geod/Data/tmp/E6515ED9-D38C-456A-AC1A-EC23C52BB246  # 0B
+/Users/lukemiles/Library/Containers/com.apple.geod/Data/tmp/E68D6B85-126B-49FC-ADC8-39E2255AFCBA  # 318KB
+/Users/lukemiles/Library/Containers/com.apple.geod/Data/tmp/E8E5A52E-20C8-4F63-A0F2-1E98F1F4012C  # 0B
+/Users/lukemiles/Library/Containers/com.apple.geod/Data/tmp/F2B5008C-3793-4A45-8A23-2DE4062F7313  # 0B
+/Users/lukemiles/Library/Containers/com.apple.geod/Data/tmp/F3B78DB1-100B-490F-8701-4846E525D5CA  # 0B
+/Users/lukemiles/Library/Containers/com.apple.geod/Data/tmp/F5656979-3BA4-44AE-8A94-CE50CCFD0936  # 288KB
+/Users/lukemiles/Library/Containers/com.apple.geod/Data/tmp/F858D245-6A95-4B03-9F53-0A1388CDD6F1  # 288KB
+/Users/lukemiles/Library/Containers/com.apple.geod/Data/tmp/F959CE45-3902-40AD-960E-85816FC40EBD  # 318KB
+/Users/lukemiles/Library/Containers/com.apple.geod/Data/tmp/FA3DD602-F0D3-4C80-8927-21B1EAB202F5  # 318KB
+/Users/lukemiles/Library/Containers/com.apple.geod/Data/tmp/FACA5DE2-28E7-449B-8299-7D0E2A406DAE  # 288KB
+/Users/lukemiles/Library/Containers/com.apple.geod/Data/tmp/FD2B6AF0-C46A-43F7-B88C-3513BC0276D6  # 0B
+/Users/lukemiles/Library/Containers/com.apple.geod/Data/tmp/FD96BD76-D321-44BC-BFFC-C235A78F5910  # 0B
+/Users/lukemiles/Library/Containers/com.apple.geod/Data/tmp/FDCA3F69-1CF5-47EC-AF53-498A14E8B55E  # 0B
+/Users/lukemiles/Library/Containers/com.apple.geod/Data/tmp/FDF240E0-1DDE-4294-BC7F-B850F0E3478A  # 288KB
+/Users/lukemiles/Library/Containers/com.apple.geod/Data/tmp/TemporaryItems  # 0B
+/Users/lukemiles/Library/Caches/com.apple.helpd/Generated  # 14.4MB
+/Users/lukemiles/Library/Caches/com.apple.helpd/HSTS.plist  # 1KB
+/Users/lukemiles/Library/Caches/com.apple.helpd/fsCachedData  # 14.0MB
+/Users/lukemiles/Library/Caches/com.apple.helpd/HelpCache.plist  # 39KB
+/Users/lukemiles/Library/Caches/com.apple.helpd/CSHelpIndex.plist  # 30KB
+/Users/lukemiles/Library/Caches/GeoServices/Resources  # 62.3MB
+/Users/lukemiles/Library/Caches/GeoServices/Experiments.pbd  # 1KB
+/Users/lukemiles/Library/Caches/GeoServices/RegionalResources  # 37.7MB
+/Users/lukemiles/Library/Caches/GeoServices/SearchAttribution  # 78KB
+/Users/lukemiles/Library/Caches/GeoServices/ActiveTileGroup.pbd  # 292KB
+/Users/lukemiles/Library/Caches/GeoServices/ResourceManifest.pbd  # 319KB
+/Users/lukemiles/Library/Caches/GeoServices/SearchAttribution.pbd  # 70KB
+/Users/lukemiles/Library/Caches/GeoServices/DirectReadConfigStore.plist  # 1KB
+/Users/lukemiles/Library/Caches/com.apple.AppleMediaServices/Metrics  # 3.3MB
+/Users/lukemiles/Library/Caches/com.apple.AppleMediaServices/Storage  # 57KB
+/Users/lukemiles/Library/Caches/com.apple.AppleMediaServices/DynamicUI  # 377KB
+/Users/lukemiles/Library/Caches/com.apple.AppleMediaServices/Engagement  # 1.9MB
+/Users/lukemiles/Library/Caches/com.apple.AppleMediaServices/PaymentSheetsUI  # 1.9MB
+/Users/lukemiles/Library/Caches/com.apple.AppleMediaServices/sap-setup-cert.txt  # 3KB
+/Users/lukemiles/Library/Caches/com.apple.parsecd/bag.plist  # 52KB
+/Users/lukemiles/Library/Caches/com.apple.parsecd/CustomFeedback  # 0B
+/Users/lukemiles/Library/Caches/com.apple.parsecd/silhouette_config  # 1KB
+/Users/lukemiles/Library/Caches/com.apple.parsecd/correction_dict_url  # 3.9MB
+/Users/lukemiles/Library/Caches/com.apple.parsecd/spotlight_stopword.map  # 150KB
+/Users/lukemiles/Library/Caches/com.apple.parsecd/dictionary_resources_url  # 2KB
+/Users/lukemiles/Library/Caches/com.apple.parsecd/silhouette_topic_mapping  # 1.0MB
+/Users/lukemiles/Library/Caches/com.apple.parsecd/spotlight_model_resources  # 4.0MB
+/Users/lukemiles/Library/Caches/com.apple.parsecd/autofill_tld_whitelist_url  # 4.3MB
+/Users/lukemiles/Library/Caches/com.apple.parsecd/crowdsourcing_blacklist_url  # 1KB
+/Users/lukemiles/Library/Caches/com.apple.parsecd/crowdsourcing_whitelist_url  # 58KB
+/Users/lukemiles/Library/Caches/com.apple.parsecd/installed_app_whitelist_url  # 169KB
+/Users/lukemiles/Library/Caches/com.apple.parsecd/silhouette_whitelisted_topics  # 55KB
+/Users/lukemiles/Library/Caches/com.apple.parsecd/spotlight_phrase_dictionary.map  # 3.4MB
+/Users/lukemiles/Library/Containers/A851149D-027A-4BB2-B88E-A9192B788035/Data/Library/Caches/google-sdks-events  # 0B
+/Users/lukemiles/Library/Group Containers/85C27NK92C.com.flexibits.fantastical2.mac/Library/Logs/85C27NK92C.com.flexibits.fantastical2.mac.helper  # 815KB
+/Users/lukemiles/Library/Group Containers/85C27NK92C.com.flexibits.fantastical2.mac/Library/Logs/com.flexibits.fantastical2.mac  # 4KB
+/Users/lukemiles/Library/Group Containers/85C27NK92C.com.flexibits.fantastical2.mac/Library/Logs/com.flexibits.fantastical2.mac.FantasticalWidgets  # 20KB
+/Users/lukemiles/Library/Group Containers/8C7439RJLG.group.codes.rambo.AirBuddy/Logs/codes.rambo.AirBuddy.AirAudio  # 2.4MB
+/Users/lukemiles/Library/Group Containers/8C7439RJLG.group.codes.rambo.AirBuddy/Logs/codes.rambo.AirBuddy.AirClassic  # 5.3MB
+/Users/lukemiles/Library/Group Containers/8C7439RJLG.group.codes.rambo.AirBuddy/Logs/codes.rambo.AirBuddy.AirStats  # 5.6MB
+/Users/lukemiles/Library/Group Containers/8C7439RJLG.group.codes.rambo.AirBuddy/Logs/codes.rambo.AirBuddy.Install  # 37KB
+/Users/lukemiles/Library/Group Containers/8C7439RJLG.group.codes.rambo.AirBuddy/Logs/codes.rambo.AirBuddy.MagicHandoff  # 4KB
+/Users/lukemiles/Library/Group Containers/8C7439RJLG.group.codes.rambo.AirBuddy/Logs/codes.rambo.AirCore  # 4.9MB
+/Users/lukemiles/Library/Group Containers/8C7439RJLG.group.codes.rambo.AirBuddy/Logs/codes.rambo.AirFoundation  # 20KB
+/Users/lukemiles/Library/Group Containers/8C7439RJLG.group.codes.rambo.AirBuddy/Logs/codes.rambo.AirIMD  # 2.2MB
+/Users/lukemiles/Library/Group Containers/8C7439RJLG.group.codes.rambo.AirBuddy/Logs/codes.rambo.AirNowPlaying  # 725KB
+/Users/lukemiles/Library/Group Containers/8C7439RJLG.group.codes.rambo.AirBuddy/Logs/codes.rambo.AirSoftwareUpdate  # 4KB
+/Users/lukemiles/Library/Group Containers/8C7439RJLG.group.codes.rambo.AirBuddy/Logs/codes.rambo.AirUI  # 9.4MB
+/Users/lukemiles/Library/Group Containers/N4RA379GBW.com.busymac.busycal3/Logs/log-000000.log  # 307KB
+/Users/lukemiles/Library/Group Containers/N4RA379GBW.com.busymac.busycal3/Logs/log-menu-000000.log  # 61KB
+/Users/lukemiles/Library/Group Containers/N4RA379GBW.com.busymac.busycal3/Logs/log-menu-000001.log  # 12KB
+/Users/lukemiles/Library/Group Containers/N4RA379GBW.com.busymac.busycal3/Logs/log-menu-000002.log  # 475KB
+/Users/lukemiles/Library/Group Containers/group.io.robbie.homeassistant/Logs/HomeAssistant-Extensions-Intents.txt  # 4KB
+/Users/lukemiles/Library/Group Containers/group.io.robbie.homeassistant/Logs/HomeAssistant-Extensions-Widgets.txt  # 4KB
+/Users/lukemiles/Library/Group Containers/group.io.robbie.homeassistant/Logs/HomeAssistant-Extensions-Widgets_2026-08-28_141221.txt  # 4KB
+/Users/lukemiles/Library/Group Containers/group.io.robbie.homeassistant/Logs/HomeAssistant-Extensions-Widgets_2026-08-31_154659.txt  # 4KB
+/Users/lukemiles/Library/Group Containers/group.io.robbie.homeassistant/Logs/HomeAssistant-Extensions-Widgets_2026-09-09_222424.txt  # 4KB
+/Users/lukemiles/Library/Group Containers/group.io.robbie.homeassistant/Logs/HomeAssistant-Extensions-Widgets_2026-09-12_192656.txt  # 12KB
+/Users/lukemiles/Library/Group Containers/group.com.apple.coreservices.useractivityd/shared-pasteboard/94615134-7959-46D7-90B3-9C4F981E9562  # 4KB
+/Users/lukemiles/Library/Group Containers/group.com.apple.coreservices.useractivityd/shared-pasteboard/type-clone  # 0B
+/Users/lukemiles/Library/Group Containers/group.com.apple.coreservices.useractivityd/shared-pasteboard/1DED27E2-6F09-47ED-B735-2C5EF9F18648  # 4KB
+
+=== Browsers ===
+/Users/lukemiles/Library/Caches/Google/Chrome/Default  # 627.0MB
+/Users/lukemiles/Library/Application Support/Google/Chrome/Default/GPUCache/index  # 263KB
+/Users/lukemiles/Library/Application Support/Google/Chrome/Default/GPUCache/data_0  # 45KB
+/Users/lukemiles/Library/Application Support/Google/Chrome/Default/GPUCache/data_1  # 270KB
+/Users/lukemiles/Library/Application Support/Google/Chrome/Default/GPUCache/data_2  # 1.1MB
+/Users/lukemiles/Library/Application Support/Google/Chrome/Default/GPUCache/data_3  # 4.2MB
+/Users/lukemiles/Library/Application Support/Google/Chrome/GPUPersistentCache/GPUCache/CFKGLLTL3DEL6E5ADIU265DZH53KRXC3  # 0B
+/Users/lukemiles/Library/Application Support/Google/Chrome/component_crx_cache/metadata.json  # 1KB
+/Users/lukemiles/Library/Application Support/Google/Chrome/component_crx_cache/0f00f599331407c475b724e344180f211a4f9e70a78226d976d9cf0fb94dc023  # 286KB
+/Users/lukemiles/Library/Application Support/Google/Chrome/component_crx_cache/57d139ba6ba3160287788817c3bf3228d44720b80144f66d583d4de0730a5d27  # 427KB
+/Users/lukemiles/Library/Application Support/Google/Chrome/component_crx_cache/71c79e105ad4b6586f827899a6df05a1e5b73ee2994b2ce1c052eff10e57a9d4  # 1.5MB
+/Users/lukemiles/Library/Application Support/Google/Chrome/component_crx_cache/949ff89611e4c99870c839177d2528b3949036716d8a10f7a24d1a90346da809  # 574KB
+/Users/lukemiles/Library/Application Support/Google/Chrome/GraphiteDawnCache/data_0  # 45KB
+/Users/lukemiles/Library/Application Support/Google/Chrome/GraphiteDawnCache/data_1  # 532KB
+/Users/lukemiles/Library/Application Support/Google/Chrome/GraphiteDawnCache/data_2  # 1.1MB
+/Users/lukemiles/Library/Application Support/Google/Chrome/GraphiteDawnCache/data_3  # 4.2MB
+/Users/lukemiles/Library/Application Support/Google/Chrome/GraphiteDawnCache/f_000001  # 17KB
+/Users/lukemiles/Library/Application Support/Google/Chrome/GraphiteDawnCache/f_000002  # 22KB
+/Users/lukemiles/Library/Application Support/Google/Chrome/GraphiteDawnCache/f_000003  # 17KB
+/Users/lukemiles/Library/Application Support/Google/Chrome/GraphiteDawnCache/f_000004  # 20KB
+/Users/lukemiles/Library/Application Support/Google/Chrome/GraphiteDawnCache/f_000005  # 17KB
+/Users/lukemiles/Library/Application Support/Google/Chrome/GraphiteDawnCache/f_000006  # 17KB
+/Users/lukemiles/Library/Application Support/Google/Chrome/GraphiteDawnCache/f_000007  # 17KB
+/Users/lukemiles/Library/Application Support/Google/Chrome/GraphiteDawnCache/f_000008  # 18KB
+/Users/lukemiles/Library/Application Support/Google/Chrome/GraphiteDawnCache/f_000009  # 18KB
+/Users/lukemiles/Library/Application Support/Google/Chrome/GraphiteDawnCache/f_00000a  # 18KB
+/Users/lukemiles/Library/Application Support/Google/Chrome/GraphiteDawnCache/f_00000b  # 22KB
+/Users/lukemiles/Library/Application Support/Google/Chrome/GraphiteDawnCache/f_00000c  # 20KB
+/Users/lukemiles/Library/Application Support/Google/Chrome/GraphiteDawnCache/f_00000d  # 17KB
+/Users/lukemiles/Library/Application Support/Google/Chrome/GraphiteDawnCache/f_00000e  # 17KB
+/Users/lukemiles/Library/Application Support/Google/Chrome/GraphiteDawnCache/f_00000f  # 18KB
+/Users/lukemiles/Library/Application Support/Google/Chrome/GraphiteDawnCache/f_000010  # 23KB
+/Users/lukemiles/Library/Application Support/Google/Chrome/GraphiteDawnCache/f_000011  # 17KB
+/Users/lukemiles/Library/Application Support/Google/Chrome/GraphiteDawnCache/f_000012  # 23KB
+/Users/lukemiles/Library/Application Support/Google/Chrome/GraphiteDawnCache/f_000013  # 17KB
+/Users/lukemiles/Library/Application Support/Google/Chrome/GraphiteDawnCache/f_000014  # 18KB
+/Users/lukemiles/Library/Application Support/Google/Chrome/GraphiteDawnCache/f_000015  # 17KB
+/Users/lukemiles/Library/Application Support/Google/Chrome/GraphiteDawnCache/f_000016  # 17KB
+/Users/lukemiles/Library/Application Support/Google/Chrome/GraphiteDawnCache/f_000017  # 20KB
+/Users/lukemiles/Library/Application Support/Google/Chrome/GraphiteDawnCache/f_000018  # 17KB
+/Users/lukemiles/Library/Application Support/Google/Chrome/GraphiteDawnCache/f_000019  # 17KB
+/Users/lukemiles/Library/Application Support/Google/Chrome/GraphiteDawnCache/f_00001a  # 24KB
+/Users/lukemiles/Library/Application Support/Google/Chrome/GraphiteDawnCache/f_00001b  # 17KB
+/Users/lukemiles/Library/Application Support/Google/Chrome/GraphiteDawnCache/f_00001c  # 22KB
+/Users/lukemiles/Library/Application Support/Google/Chrome/GraphiteDawnCache/f_00001d  # 18KB
+/Users/lukemiles/Library/Application Support/Google/Chrome/GraphiteDawnCache/f_00001e  # 17KB
+/Users/lukemiles/Library/Application Support/Google/Chrome/GraphiteDawnCache/f_00001f  # 20KB
+/Users/lukemiles/Library/Application Support/Google/Chrome/GraphiteDawnCache/f_000020  # 18KB
+/Users/lukemiles/Library/Application Support/Google/Chrome/GraphiteDawnCache/f_000021  # 18KB
+/Users/lukemiles/Library/Application Support/Google/Chrome/GraphiteDawnCache/f_000022  # 17KB
+/Users/lukemiles/Library/Application Support/Google/Chrome/GraphiteDawnCache/f_000023  # 23KB
+/Users/lukemiles/Library/Application Support/Google/Chrome/GraphiteDawnCache/f_000024  # 17KB
+/Users/lukemiles/Library/Application Support/Google/Chrome/GraphiteDawnCache/f_000025  # 17KB
+/Users/lukemiles/Library/Application Support/Google/Chrome/GraphiteDawnCache/f_000026  # 17KB
+/Users/lukemiles/Library/Application Support/Google/Chrome/GraphiteDawnCache/f_000027  # 17KB
+/Users/lukemiles/Library/Application Support/Google/Chrome/GraphiteDawnCache/f_000028  # 20KB
+/Users/lukemiles/Library/Application Support/Google/Chrome/GraphiteDawnCache/f_000029  # 17KB
+/Users/lukemiles/Library/Application Support/Google/Chrome/GraphiteDawnCache/f_00002a  # 17KB
+/Users/lukemiles/Library/Application Support/Google/Chrome/GraphiteDawnCache/f_00002b  # 22KB
+/Users/lukemiles/Library/Application Support/Google/Chrome/GraphiteDawnCache/f_00002c  # 17KB
+/Users/lukemiles/Library/Application Support/Google/Chrome/GraphiteDawnCache/f_00002d  # 20KB
+/Users/lukemiles/Library/Application Support/Google/Chrome/GraphiteDawnCache/f_00002e  # 17KB
+/Users/lukemiles/Library/Application Support/Google/Chrome/GraphiteDawnCache/f_00002f  # 17KB
+/Users/lukemiles/Library/Application Support/Google/Chrome/GraphiteDawnCache/index  # 263KB
+/Users/lukemiles/Library/Application Support/Google/Chrome/optimization_guide_model_store/2  # 397KB
+/Users/lukemiles/Library/Application Support/Google/Chrome/optimization_guide_model_store/9  # 37KB
+/Users/lukemiles/Library/Application Support/Google/Chrome/optimization_guide_model_store/13  # 1.2MB
+/Users/lukemiles/Library/Application Support/Google/Chrome/optimization_guide_model_store/15  # 3.2MB
+/Users/lukemiles/Library/Application Support/Google/Chrome/optimization_guide_model_store/20  # 37KB
+/Users/lukemiles/Library/Application Support/Google/Chrome/optimization_guide_model_store/24  # 4.6MB
+/Users/lukemiles/Library/Application Support/Google/Chrome/optimization_guide_model_store/25  # 3.6MB
+/Users/lukemiles/Library/Application Support/Google/Chrome/optimization_guide_model_store/26  # 12KB
+/Users/lukemiles/Library/Application Support/Google/Chrome/optimization_guide_model_store/43  # 37.6MB
+/Users/lukemiles/Library/Application Support/Google/Chrome/optimization_guide_model_store/45  # 143KB
+/Users/lukemiles/Library/Application Support/Google/Chrome/Default/Service Worker/CacheStorage/a48de970e5666a27e5a4debf52d59922261e756d/abe1ec9b-c4a9-433e-8dc7-b611a9cefe44  # 8KB
+/Users/lukemiles/Library/Application Support/Google/Chrome/Default/Service Worker/CacheStorage/4cc699dd486af2551d01b1a74abd5337c6e052e5/bf46a6c7-e161-4346-a4f9-b9483f275216  # 8KB
+/Users/lukemiles/Library/Application Support/Google/Chrome/Default/Service Worker/CacheStorage/eadf114e35641d8a14aa9648d8e1c01b4b3bb3f0/19cb8dbe-59ba-49ac-b585-8593314a3650  # 27.8MB
+/Users/lukemiles/Library/Application Support/Google/Chrome/Default/Service Worker/CacheStorage/eadf114e35641d8a14aa9648d8e1c01b4b3bb3f0/bc5b9e84-083e-4ab6-a26c-22319a036e37  # 4.6MB
+/Users/lukemiles/Library/Application Support/Google/Chrome/Default/Service Worker/CacheStorage/670b766c44f5a5a7a73e394f8585b74ec9498936/2c277a07-7b8e-487a-b311-24f467cb2695  # 8KB
+/Users/lukemiles/Library/Application Support/Google/Chrome/Default/Service Worker/CacheStorage/670b766c44f5a5a7a73e394f8585b74ec9498936/f09f2317-a6f0-47f9-9152-8893f19bd679  # 8KB
+/Users/lukemiles/Library/Application Support/Google/Chrome/Default/Service Worker/CacheStorage/670b766c44f5a5a7a73e394f8585b74ec9498936/2c4070e6-b75d-4010-81e7-7ab8c2b2af8b  # 8KB
+/Users/lukemiles/Library/Application Support/Google/Chrome/Default/Service Worker/CacheStorage/670b766c44f5a5a7a73e394f8585b74ec9498936/7fe4d5a9-a724-417c-96ec-047e6bc39d22  # 8KB
+/Users/lukemiles/Library/Application Support/Google/Chrome/Default/Service Worker/CacheStorage/b2cae643b04b05d2cc5bd1b9f23f3c3515d93b50/542a92e1-a588-42b9-94c8-d69a4e4d6580  # 8KB
+/Users/lukemiles/Library/Application Support/Google/Chrome/Default/Service Worker/CacheStorage/20d687170abbaa89783b096aeaddc92fa4b37f82/d0050cff-5062-4384-b8c2-b544ff41ec94  # 8KB
+/Users/lukemiles/Library/Application Support/Google/Chrome/Default/Service Worker/CacheStorage/2a1c18365e83cb6e1347464058faa3d44e45a31c/0aeea668-f845-4de0-9956-0cb4ad2f0b96  # 8KB
+/Users/lukemiles/Library/Application Support/Google/Chrome/Default/Service Worker/CacheStorage/2a1c18365e83cb6e1347464058faa3d44e45a31c/1c6fda49-be4a-4605-a97b-d8640eea934a  # 8KB
+/Users/lukemiles/Library/Application Support/Google/Chrome/Default/Service Worker/CacheStorage/2a1c18365e83cb6e1347464058faa3d44e45a31c/c2647cd9-72db-413e-8c12-89890ea8f60d  # 8KB
+/Users/lukemiles/Library/Application Support/Google/Chrome/Default/Service Worker/CacheStorage/2a1c18365e83cb6e1347464058faa3d44e45a31c/124a3063-17fb-4ef2-9e19-bc080cc60837  # 8KB
+/Users/lukemiles/Library/Application Support/Google/Chrome/Default/Service Worker/CacheStorage/2a1c18365e83cb6e1347464058faa3d44e45a31c/f92dcab4-2c2d-4647-bfb4-858988a69e02  # 8KB
+/Users/lukemiles/Library/Application Support/Google/Chrome/Default/Service Worker/CacheStorage/5ed3cf13d0ee06712ce246e17bb33c1110d64d2a/072f86cc-6d32-4e9f-9307-34ffe5a553b1  # 8KB
+/Users/lukemiles/Library/Application Support/Google/Chrome/Default/Service Worker/CacheStorage/281f6469df2714b4fcc631679d89c655caaa68dc/86db59db-3f0c-43aa-b7b4-55782dc28ba9  # 8KB
+/Users/lukemiles/Library/Application Support/Google/Chrome/Default/Service Worker/CacheStorage/379f1cbab5b08b6fc9e08681e42d8be311441c88/8358b622-3168-4c51-9eec-409dbf68b730  # 8KB
+/Users/lukemiles/Library/Application Support/Google/Chrome/Default/Service Worker/CacheStorage/379f1cbab5b08b6fc9e08681e42d8be311441c88/4cc82271-53f6-4028-9c42-de573ff30d65  # 590KB
+/Users/lukemiles/Library/Application Support/Google/Chrome/Default/Service Worker/CacheStorage/379f1cbab5b08b6fc9e08681e42d8be311441c88/45f78be6-5200-42c5-92c7-15d327f5e29d  # 46.3MB
+/Users/lukemiles/Library/Application Support/Google/Chrome/Default/Service Worker/CacheStorage/976130314d9c593485567eae4ceff30f1144e73d/2309164d-ed2b-4869-857d-ae0c831a1e07  # 8KB
+/Users/lukemiles/Library/Application Support/Google/Chrome/Default/Service Worker/CacheStorage/8cbb992fe0cd9ef960e69a214646bd270516a23e/8beb55d7-1c3d-4008-a2ab-ff341b329684  # 8KB
+/Users/lukemiles/Library/Application Support/Google/Chrome/Default/Service Worker/CacheStorage/8cbb992fe0cd9ef960e69a214646bd270516a23e/7ed685db-daa6-4929-acce-a8f6739be149  # 8KB
+/Users/lukemiles/Library/Application Support/Google/Chrome/Default/Service Worker/CacheStorage/8cbb992fe0cd9ef960e69a214646bd270516a23e/bea53a18-5472-428f-882b-9414b1c6bc1b  # 8KB
+/Users/lukemiles/Library/Application Support/Google/Chrome/Default/Service Worker/CacheStorage/8cbb992fe0cd9ef960e69a214646bd270516a23e/4acfa5ef-d7ca-4f9d-a649-39a4fa97f15a  # 8KB
+/Users/lukemiles/Library/Application Support/Google/Chrome/Default/Service Worker/CacheStorage/8cbb992fe0cd9ef960e69a214646bd270516a23e/b7e4468a-ebee-4e0d-bda9-26150795b1bd  # 8KB
+/Users/lukemiles/Library/Application Support/Google/Chrome/Default/Service Worker/CacheStorage/8cbb992fe0cd9ef960e69a214646bd270516a23e/015ffa76-64fa-4361-a2db-6927776a1978  # 8KB
+/Users/lukemiles/Library/Application Support/Google/Chrome/Default/Service Worker/CacheStorage/8cbb992fe0cd9ef960e69a214646bd270516a23e/25a6fa92-25d4-4762-b044-11958f74bbba  # 8KB
+/Users/lukemiles/Library/Application Support/Google/Chrome/Default/Service Worker/CacheStorage/8cbb992fe0cd9ef960e69a214646bd270516a23e/a2381c6a-99a1-45c1-835f-51069b8ce018  # 8KB
+/Users/lukemiles/Library/Application Support/Google/Chrome/Default/Service Worker/CacheStorage/8cbb992fe0cd9ef960e69a214646bd270516a23e/4e0fd235-38a8-499a-91a8-ff6f62753f8f  # 8KB
+/Users/lukemiles/Library/Application Support/Google/Chrome/Default/Service Worker/CacheStorage/8cbb992fe0cd9ef960e69a214646bd270516a23e/c9a492b7-ed3c-4963-afcc-a585c43f7e3e  # 8KB
+/Users/lukemiles/Library/Application Support/Google/Chrome/Default/Service Worker/CacheStorage/b05c5b0531105a3baeeb611aac09ff37b5322118/a48e31e1-29cc-41f2-9cf3-5e97ceca83e8  # 8KB
+/Users/lukemiles/Library/Application Support/Google/Chrome/Default/Service Worker/CacheStorage/b05c5b0531105a3baeeb611aac09ff37b5322118/f27cdabe-dc29-4d69-89f9-636917baa8d5  # 8KB
+/Users/lukemiles/Library/Application Support/Google/Chrome/Default/Service Worker/CacheStorage/b05c5b0531105a3baeeb611aac09ff37b5322118/eefc063a-82ef-4462-8cd3-f29f9be10315  # 8KB
+/Users/lukemiles/Library/Application Support/Google/Chrome/Default/Service Worker/CacheStorage/b05c5b0531105a3baeeb611aac09ff37b5322118/9e0c8560-80c4-46b5-8263-867eb170efb2  # 8KB
+/Users/lukemiles/Library/Application Support/Google/Chrome/Default/Service Worker/CacheStorage/b05c5b0531105a3baeeb611aac09ff37b5322118/9fad5895-7ba0-492d-a987-baac2d4e2dc3  # 8KB
+/Users/lukemiles/Library/Application Support/Google/Chrome/Default/Service Worker/CacheStorage/b05c5b0531105a3baeeb611aac09ff37b5322118/777f1eb3-eb0e-471e-9b24-551445a45693  # 8KB
+/Users/lukemiles/Library/Application Support/Google/Chrome/Default/Service Worker/CacheStorage/0d517440a6cb39dd82577bf94a41cd649ba4e59d/5a5552cf-0e00-4648-ba61-d2f4588d4e3e  # 8KB
+/Users/lukemiles/Library/Application Support/Google/GoogleUpdater/crx_cache/metadata.json  # 1KB
+/Users/lukemiles/Library/Caches/company.thebrowser.dia/async.log  # 0B
+/Users/lukemiles/Library/Caches/company.thebrowser.dia/io.sentry  # 0B
+/Users/lukemiles/Library/Caches/company.thebrowser.dia/fsCachedData  # 139KB
+/Users/lukemiles/Library/Caches/company.thebrowser.dia/ModelFileCache  # 144.6MB
+/Users/lukemiles/Library/Application Support/Dia/User Data/Default/Service Worker/CacheStorage/5281815dbfd70851ee90cb96bed828033cf19ed1/f164b7ae-400b-40fb-82b4-9f2318043b52  # 8KB
+/Users/lukemiles/Library/Application Support/Dia/User Data/Default/Service Worker/CacheStorage/321ee01adbe558c045e8348351f0f24fe205aa52/803feab0-e819-4879-908b-2673ef0b1bbf  # 303KB
+/Users/lukemiles/Library/Application Support/Dia/User Data/Default/Service Worker/CacheStorage/321ee01adbe558c045e8348351f0f24fe205aa52/54d0f5fd-f7b7-4b56-b421-4913eb69992c  # 111KB
+/Users/lukemiles/Library/Application Support/Dia/User Data/Default/Service Worker/CacheStorage/321ee01adbe558c045e8348351f0f24fe205aa52/37162686-f487-40f5-ad57-97de431ae942  # 86KB
+/Users/lukemiles/Library/Application Support/Dia/User Data/Default/Service Worker/CacheStorage/321ee01adbe558c045e8348351f0f24fe205aa52/8a7933e9-4f33-4add-8606-c303ba146684  # 2.2MB
+/Users/lukemiles/Library/Application Support/Dia/User Data/Default/Service Worker/CacheStorage/321ee01adbe558c045e8348351f0f24fe205aa52/000f3ec1-6586-4901-82ad-86ed9c150ecf  # 16KB
+/Users/lukemiles/Library/Application Support/Dia/User Data/Default/Service Worker/CacheStorage/321ee01adbe558c045e8348351f0f24fe205aa52/c8ed701e-0cf4-4cb2-bae5-037d56546a35  # 41KB
+/Users/lukemiles/Library/Application Support/Dia/User Data/Default/Service Worker/CacheStorage/73c6dc70df685f0794f601b1102fe581b81fd032/c0c6c7e4-f60e-4b51-8a37-f2c40daa0c35  # 1.3MB
+/Users/lukemiles/Library/Application Support/Dia/User Data/Default/Service Worker/CacheStorage/73c6dc70df685f0794f601b1102fe581b81fd032/e49502ca-97bb-4789-86de-760d73822aa8  # 209KB
+/Users/lukemiles/Library/Application Support/Dia/User Data/Default/Service Worker/CacheStorage/5381cb7d7f0d31a6afec904154068ba9f06028a5/7963419e-628f-48ae-8140-91d18071b8d7  # 65.3MB
+/Users/lukemiles/Library/Application Support/Dia/User Data/Default/Service Worker/CacheStorage/5381cb7d7f0d31a6afec904154068ba9f06028a5/963c2591-dbec-46e2-8456-13c7dcd5a0e7  # 20KB
+/Users/lukemiles/Library/Application Support/Dia/User Data/Default/Service Worker/CacheStorage/5381cb7d7f0d31a6afec904154068ba9f06028a5/e574debb-ec7f-403d-bb1f-5d7ca6614ece  # 365KB
+/Users/lukemiles/Library/Application Support/Dia/User Data/Default/Service Worker/CacheStorage/2a1c18365e83cb6e1347464058faa3d44e45a31c/e45c16fa-be1f-4005-bdb3-31f7f4a612b8  # 8KB
+/Users/lukemiles/Library/Application Support/Dia/User Data/Default/Service Worker/CacheStorage/2a1c18365e83cb6e1347464058faa3d44e45a31c/b13a2e62-d7b1-4123-a9d5-05dbddd02ec3  # 8KB
+/Users/lukemiles/Library/Application Support/Dia/User Data/Default/Service Worker/CacheStorage/2a1c18365e83cb6e1347464058faa3d44e45a31c/b7993ba1-4d93-49f4-ac4d-c5ad11b4fef8  # 8KB
+/Users/lukemiles/Library/Application Support/Dia/User Data/Default/Service Worker/CacheStorage/2a1c18365e83cb6e1347464058faa3d44e45a31c/5f1663ed-a453-430d-b1ff-9f5e5d514dcb  # 8KB
+/Users/lukemiles/Library/Application Support/Dia/User Data/Default/Service Worker/CacheStorage/2a1c18365e83cb6e1347464058faa3d44e45a31c/20dd6c8f-96f0-4a75-be01-f9966363db98  # 8KB
+/Users/lukemiles/Library/Application Support/Dia/User Data/Default/Service Worker/CacheStorage/36652483aa99b53615b3bc0ba55fee582e6d2871/65b5ce40-6cfc-4f6e-b052-1214566e6efa  # 115KB
+/Users/lukemiles/Library/Application Support/Dia/User Data/Default/Service Worker/CacheStorage/379f1cbab5b08b6fc9e08681e42d8be311441c88/e858b683-fe95-4f74-b5fe-5a64d33642a5  # 8KB
+/Users/lukemiles/Library/Application Support/Dia/User Data/Default/Service Worker/CacheStorage/379f1cbab5b08b6fc9e08681e42d8be311441c88/4cc33664-7f8d-470d-8bb4-97c48bc7afde  # 41.5MB
+/Users/lukemiles/Library/Application Support/Dia/User Data/Default/Service Worker/CacheStorage/379f1cbab5b08b6fc9e08681e42d8be311441c88/83b816d2-633d-49fe-a115-b0f9f4ca10a3  # 557KB
+/Users/lukemiles/Library/Application Support/Dia/User Data/Default/Service Worker/CacheStorage/b05c5b0531105a3baeeb611aac09ff37b5322118/6e268bc8-259d-47a2-baf8-64d7d639b620  # 8KB
+/Users/lukemiles/Library/Application Support/Dia/User Data/Default/Service Worker/CacheStorage/b05c5b0531105a3baeeb611aac09ff37b5322118/bcc06048-a9ec-4c21-b891-3cc0d4126663  # 8KB
+/Users/lukemiles/Library/Application Support/Dia/User Data/Default/Service Worker/CacheStorage/b05c5b0531105a3baeeb611aac09ff37b5322118/5b4a8f9d-29f5-4286-a2e8-6dd5b47e1eda  # 8KB
+/Users/lukemiles/Library/Application Support/Dia/User Data/Default/Service Worker/CacheStorage/b05c5b0531105a3baeeb611aac09ff37b5322118/f02b03d2-5d20-4719-aba5-cfa0765aee9b  # 8KB
+/Users/lukemiles/Library/Application Support/Dia/User Data/Default/Service Worker/CacheStorage/b05c5b0531105a3baeeb611aac09ff37b5322118/f1a9e50a-2991-41d6-a444-350165669fcf  # 8KB
+/Users/lukemiles/Library/Application Support/Dia/User Data/Default/Service Worker/CacheStorage/f34baaa68f0cb6998b91318db4e5e89afeaed8aa/c271a3b7-f147-4a07-83e5-fb86f1ce2ac0  # 8KB
+/Users/lukemiles/Library/Application Support/Dia/User Data/Default/Service Worker/CacheStorage/fc0c69f08a2ca224d0ec52194b6b9fa945fb4449/87b1865e-4d66-4ee1-b0e4-871f1536d276  # 90KB
+/Users/lukemiles/Library/Application Support/Dia/User Data/Default/Service Worker/CacheStorage/fc0c69f08a2ca224d0ec52194b6b9fa945fb4449/ed908ede-3ef1-4a3a-be87-ef09592fc14a  # 20KB
+
+=== Developer tools ===
+/Users/lukemiles/.cargo/registry/cache/index.crates.io-1949cf8c6b5b557f  # 8.2MB
+/Users/lukemiles/dotfiles/.config/thefuck/__pycache__  # 4KB
+/var/folders/f1/bmbjv4y11hjdg4qf2ghyzc3h0000gn/C/clang/ModuleCache  # 188.1MB
+/Users/lukemiles/Library/Caches/SentryCrash/Dia  # 4KB
+/Users/lukemiles/Library/Caches/SentryCrash/Refine  # 4KB
+/Users/lukemiles/Library/Caches/SentryCrash/Raycast  # 4KB
+/Users/lukemiles/Library/Caches/SentryCrash/SANDISK  # 4KB
+/Users/lukemiles/Library/Caches/SentryCrash/Arc Helper  # 4KB
+/Users/lukemiles/Library/Caches/SentryCrash/Pasteboard  # 4KB
+/Users/lukemiles/Library/Caches/SentryCrash/Raycast Beta  # 4KB
+/Users/lukemiles/Library/Caches/SentryCrash/Accessibility  # 4KB
+/Users/lukemiles/Library/Caches/SentryCrash/$(PRODUCT_NAME)  # 4KB
+/Users/lukemiles/Library/Caches/SentryCrash/Raycast Pasteboard  # 4KB
+/Users/lukemiles/Library/Caches/SentryCrash/SanDisk Memory Zone  # 4KB
+/Users/lukemiles/Library/Caches/SentryCrash/Raycast Accessibility  # 4KB
+/Users/lukemiles/Library/Caches/com.crashlytics.data/com.readdle.PDFExpert-Mac  # 262KB
+/opt/homebrew/var/homebrew/locks/update  # 0B
+
+=== Apps & utilities ===
+/Users/lukemiles/Library/Caches/com.spotify.client/new  # 0B
+/Users/lukemiles/Library/Caches/com.spotify.client/Data  # 331.4MB
+/Users/lukemiles/Library/Caches/com.spotify.client/WebKit  # 4KB
+/Users/lukemiles/Library/Caches/com.spotify.client/pending  # 0B
+/Users/lukemiles/Library/Caches/com.spotify.client/First Run  # 0B
+/Users/lukemiles/Library/Caches/com.spotify.client/completed  # 0B
+/Users/lukemiles/Library/Caches/com.spotify.client/Crowd Deny  # 324KB
+/Users/lukemiles/Library/Caches/com.spotify.client/MEIPreload  # 20KB
+/Users/lukemiles/Library/Caches/com.spotify.client/SafetyTips  # 197KB
+/Users/lukemiles/Library/Caches/com.spotify.client/Variations  # 1KB
+/Users/lukemiles/Library/Caches/com.spotify.client/ZxcvbnData  # 1.7MB
+/Users/lukemiles/Library/Caches/com.spotify.client/Local State  # 8KB
+/Users/lukemiles/Library/Caches/com.spotify.client/PKIMetadata  # 438KB
+/Users/lukemiles/Library/Caches/com.spotify.client/ShaderCache  # 561KB
+/Users/lukemiles/Library/Caches/com.spotify.client/WidevineCdm  # 20.2MB
+/Users/lukemiles/Library/Caches/com.spotify.client/attachments  # 0B
+/Users/lukemiles/Library/Caches/com.spotify.client/Dictionaries  # 0B
+/Users/lukemiles/Library/Caches/com.spotify.client/OriginTrials  # 0B
+/Users/lukemiles/Library/Caches/com.spotify.client/fsCachedData  # 0B
+/Users/lukemiles/Library/Caches/com.spotify.client/settings.dat  # 1KB
+/Users/lukemiles/Library/Caches/com.spotify.client/GrShaderCache  # 561KB
+/Users/lukemiles/Library/Caches/com.spotify.client/Safe Browsing  # 0B
+/Users/lukemiles/Library/Caches/com.spotify.client/WasmTtsEngine  # 23.4MB
+/Users/lukemiles/Library/Caches/com.spotify.client/ActorSafetyLists  # 2.7MB
+/Users/lukemiles/Library/Caches/com.spotify.client/CaptchaProviders  # 12KB
+/Users/lukemiles/Library/Caches/com.spotify.client/FileTypePolicies  # 16KB
+/Users/lukemiles/Library/Caches/com.spotify.client/chrome_debug.log  # 0B
+/Users/lukemiles/Library/Caches/com.spotify.client/GraphiteDawnCache  # 6.3MB
+/Users/lukemiles/Library/Caches/com.spotify.client/OptimizationHints  # 582KB
+/Users/lukemiles/Library/Caches/com.spotify.client/SSLErrorAssistant  # 12KB
+/Users/lukemiles/Library/Caches/com.spotify.client/ChromeFeatureState  # 1KB
+/Users/lukemiles/Library/Caches/com.spotify.client/Subresource Filter  # 446KB
+/Users/lukemiles/Library/Caches/com.spotify.client/component_crx_cache  # 58.3MB
+/Users/lukemiles/Library/Caches/com.spotify.client/NativeMessagingHosts  # 0B
+/Users/lukemiles/Library/Caches/com.spotify.client/extensions_crx_cache  # 4KB
+/Users/lukemiles/Library/Caches/com.spotify.client/CertificateRevocation  # 3.0MB
+/Users/lukemiles/Library/Caches/com.spotify.client/segmentation_platform  # 49KB
+/Users/lukemiles/Library/Caches/com.spotify.client/FirstPartySetsPreloaded  # 25KB
+/Users/lukemiles/Library/Caches/com.spotify.client/BrowserMetrics-spare.pma  # 4.2MB
+/Users/lukemiles/Library/Caches/com.spotify.client/OnDeviceHeadSuggestModel  # 7.9MB
+/Users/lukemiles/Library/Caches/com.spotify.client/TrustTokenKeyCommitments  # 25KB
+/Users/lukemiles/Library/Caches/com.spotify.client/AmountExtractionHeuristicRegexes  # 12KB
+/Users/lukemiles/Library/Caches/com.spotify.client/PrivacySandboxAttestationsPreloaded  # 16KB
+/Users/lukemiles/Library/Application Support/Steam/appcache/stats  # 2.1MB
+/Users/lukemiles/Library/Application Support/Steam/appcache/httpcache  # 795KB
+/Users/lukemiles/Library/Application Support/Steam/appcache/appinfo.vdf  # 1.8MB
+/Users/lukemiles/Library/Application Support/Steam/appcache/librarycache  # 130.5MB
+/Users/lukemiles/Library/Application Support/Steam/appcache/packageinfo.vdf  # 57KB
+/Users/lukemiles/Library/Application Support/Steam/depotcache/233_139290177754532669.manifest  # 244KB
+/Users/lukemiles/Library/Application Support/Steam/depotcache/234_488462887721122399.manifest  # 9KB
+/Users/lukemiles/Library/Application Support/Steam/depotcache/221_3666218991449795038.manifest  # 287KB
+/Users/lukemiles/Library/Application Support/Steam/depotcache/223_1404563906941563189.manifest  # 10KB
+/Users/lukemiles/Library/Application Support/Steam/depotcache/340_4714758009482017207.manifest  # 32KB
+/Users/lukemiles/Library/Application Support/Steam/depotcache/340_4976378284936306281.manifest  # 32KB
+/Users/lukemiles/Library/Application Support/Steam/depotcache/380_2711482073477362647.manifest  # 29KB
+/Users/lukemiles/Library/Application Support/Steam/depotcache/380_5164886893529847653.manifest  # 29KB
+/Users/lukemiles/Library/Application Support/Steam/depotcache/389_1776767667551246449.manifest  # 59KB
+/Users/lukemiles/Library/Application Support/Steam/depotcache/389_6097040002094797798.manifest  # 60KB
+/Users/lukemiles/Library/Application Support/Steam/depotcache/420_5401366820066204187.manifest  # 144KB
+/Users/lukemiles/Library/Application Support/Steam/depotcache/420_6174575029933153671.manifest  # 142KB
+/Users/lukemiles/Library/Application Support/Steam/depotcache/262063_654433740633253024.manifest  # 40KB
+/Users/lukemiles/Library/Application Support/Steam/depotcache/105603_3157492060776142600.manifest  # 2.5MB
+/Users/lukemiles/Library/Application Support/Steam/depotcache/105603_7648670563869725321.manifest  # 2.5MB
+/Users/lukemiles/Library/Application Support/Steam/depotcache/2230762_157004476975978298.manifest  # 1KB
+/Users/lukemiles/Library/Application Support/Steam/depotcache/241100_6711344606286301481.manifest  # 1KB
+/Users/lukemiles/Library/Application Support/Steam/depotcache/262063_3423413158203630933.manifest  # 40KB
+/Users/lukemiles/Library/Application Support/Steam/depotcache/262064_2842070835785182415.manifest  # 1.7MB
+/Users/lukemiles/Library/Application Support/Steam/depotcache/262064_9202106814974186003.manifest  # 1.7MB
+/Users/lukemiles/Library/Application Support/Steam/depotcache/281990_7049093626584203434.manifest  # 2.2MB
+/Users/lukemiles/Library/Application Support/Steam/depotcache/281991_3922771984290037884.manifest  # 7.4MB
+/Users/lukemiles/Library/Application Support/Steam/depotcache/281993_3550514751965101572.manifest  # 24KB
+/Users/lukemiles/Library/Application Support/Steam/depotcache/4368351_211654449801621268.manifest  # 55KB
+/Users/lukemiles/Library/Application Support/Steam/depotcache/445701_8167459794238687528.manifest  # 36KB
+/Users/lukemiles/Library/Application Support/Steam/depotcache/518910_2771826165032019499.manifest  # 3KB
+/Users/lukemiles/Library/Application Support/Steam/depotcache/554350_6329361971126473517.manifest  # 1KB
+/Users/lukemiles/Library/Application Support/Steam/depotcache/633310_3345875144006097969.manifest  # 1KB
+/Users/lukemiles/Library/Application Support/Steam/depotcache/1117861_2183525769666721026.manifest  # 325KB
+/Users/lukemiles/Library/Application Support/Steam/depotcache/1749080_2352410094773288579.manifest  # 2KB
+/Users/lukemiles/Library/Application Support/Steam/depotcache/1794684_3164112101380201073.manifest  # 377KB
+/Users/lukemiles/Library/Application Support/Steam/depotcache/1794684_6504697067018038478.manifest  # 376KB
+/Users/lukemiles/Library/Application Support/Steam/depotcache/2117472_2166366874833491147.manifest  # 669KB
+/Users/lukemiles/Library/Application Support/Steam/depotcache/2117472_2972009889527902827.manifest  # 668KB
+/Users/lukemiles/Library/Application Support/Steam/depotcache/2313552_8113761075626417808.manifest  # 1KB
+/Users/lukemiles/Library/Application Support/Steam/depotcache/2380030_6939619431392031129.manifest  # 1KB
+/Users/lukemiles/Library/Application Support/Steam/depotcache/2840100_5013502338098449837.manifest  # 5KB
+/Users/lukemiles/Library/Application Support/Steam/depotcache/2882402_1065329890971882197.manifest  # 76KB
+/Users/lukemiles/Library/Application Support/Steam/depotcache/2882402_7941503704966801084.manifest  # 76KB
+/Users/lukemiles/Library/Application Support/Steam/depotcache/3419432_5447542620840874415.manifest  # 70KB
+/Users/lukemiles/Library/Application Support/Steam/depotcache/3419432_9174252819266260543.manifest  # 70KB
+/Users/lukemiles/Library/Application Support/Steam/depotcache/3451103_3399867216081719292.manifest  # 1KB
+/Users/lukemiles/Library/Application Support/Steam/depotcache/3929773_8923528696351680416.manifest  # 1KB
+/Users/lukemiles/Library/Application Support/Steam/depotcache/4103073_6419780193952673562.manifest  # 53KB
+/Users/lukemiles/Library/Application Support/Steam/depotcache/4329102_1202633181764436241.manifest  # 398KB
+/Users/lukemiles/Library/Application Support/Steam/depotcache/4329102_3863104555904925310.manifest  # 398KB
+/Users/lukemiles/Library/Application Support/Steam/depotcache/4368351_1787658452816921850.manifest  # 78KB
+/Users/lukemiles/Library/Application Support/Steam/logs/cef_log.txt  # 477KB
+/Users/lukemiles/Library/Application Support/Steam/logs/steamui.txt  # 169KB
+/Users/lukemiles/Library/Application Support/Steam/logs/cloud_log.txt  # 207KB
+/Users/lukemiles/Library/Application Support/Steam/logs/stats_log.txt  # 29KB
+/Users/lukemiles/Library/Application Support/Steam/logs/webhelper.txt  # 1.2MB
+/Users/lukemiles/Library/Application Support/Steam/logs/controller.txt  # 112KB
+/Users/lukemiles/Library/Application Support/Steam/logs/shader_log.txt  # 2KB
+/Users/lukemiles/Library/Application Support/Steam/logs/appinfo_log.txt  # 461KB
+/Users/lukemiles/Library/Application Support/Steam/logs/console_log.txt  # 264KB
+/Users/lukemiles/Library/Application Support/Steam/logs/content_log.txt  # 1.2MB
+/Users/lukemiles/Library/Application Support/Steam/logs/parental_log.txt  # 251KB
+/Users/lukemiles/Library/Application Support/Steam/logs/steamsysinfo.txt  # 2KB
+/Users/lukemiles/Library/Application Support/Steam/logs/steamui_html.txt  # 92KB
+/Users/lukemiles/Library/Application Support/Steam/logs/webhelper_js.txt  # 349KB
+/Users/lukemiles/Library/Application Support/Steam/logs/workshop_log.txt  # 988KB
+/Users/lukemiles/Library/Application Support/Steam/logs/bootstrap_log.txt  # 171KB
+/Users/lukemiles/Library/Application Support/Steam/logs/controller_ui.txt  # 61KB
+/Users/lukemiles/Library/Application Support/Steam/logs/steamui_audio.txt  # 5KB
+/Users/lukemiles/Library/Application Support/Steam/logs/steamui_login.txt  # 358KB
+/Users/lukemiles/Library/Application Support/Steam/logs/streaming_log.txt  # 19KB
+/Users/lukemiles/Library/Application Support/Steam/logs/systemmanager.txt  # 41KB
+/Users/lukemiles/Library/Application Support/Steam/logs/webhelper_gpu.txt  # 191KB
+/Users/lukemiles/Library/Application Support/Steam/logs/connection_log.txt  # 3.8MB
+/Users/lukemiles/Library/Application Support/Steam/logs/steamui_system.txt  # 13KB
+/Users/lukemiles/Library/Application Support/Steam/logs/steamui_update.txt  # 2KB
+/Users/lukemiles/Library/Application Support/Steam/logs/timedtrial_log.txt  # 66KB
+/Users/lukemiles/Library/Application Support/Steam/logs/configstore_log.txt  # 432KB
+/Users/lukemiles/Library/Application Support/Steam/logs/gameprocess_log.txt  # 25KB
+/Users/lukemiles/Library/Application Support/Steam/logs/sitelicense_log.txt  # 36KB
+/Users/lukemiles/Library/Application Support/Steam/logs/text_filter_log.txt  # 10KB
+/Users/lukemiles/Library/Application Support/Steam/logs/transport_client.txt  # 2KB
+/Users/lukemiles/Library/Application Support/Steam/logs/systemdockmanager.txt  # 2KB
+/Users/lukemiles/Library/Application Support/Steam/logs/systemperfmanager.txt  # 4KB
+/Users/lukemiles/Library/Application Support/Steam/logs/transport_steamui.txt  # 172KB
+/Users/lukemiles/Library/Application Support/Steam/logs/cloud_log.previous.txt  # 1.0MB
+/Users/lukemiles/Library/Application Support/Steam/logs/remote_connections.txt  # 25KB
+/Users/lukemiles/Library/Application Support/Steam/logs/systemaudiomanager.txt  # 2KB
+/Users/lukemiles/Library/Application Support/Steam/logs/systemperfreporting.txt  # 2KB
+/Users/lukemiles/Library/Application Support/Steam/logs/appinfo_log.previous.txt  # 4.2MB
+/Users/lukemiles/Library/Application Support/Steam/logs/steamui_librarycache.txt  # 1.2MB
+/Users/lukemiles/Library/Application Support/Steam/logs/systemdisplaymanager.txt  # 2KB
+/Users/lukemiles/Library/Application Support/Steam/logs/steamui_html.previous.txt  # 524KB
+/Users/lukemiles/Library/Application Support/Steam/logs/steamui_login.previous.txt  # 524KB
+/Users/lukemiles/Library/Caches/com.mitchellh.ghostty/sentry  # 4KB
+/Users/lukemiles/Library/Caches/com.mitchellh.ghostty/fsCachedData  # 0B
+
+=== Application Support ===
+/Users/lukemiles/Library/Application Support/1Password/Code Cache/js  # 8KB
+/Users/lukemiles/Library/Application Support/1Password/Code Cache/wasm  # 8KB
+/Users/lukemiles/Library/Application Support/1Password/Cache/Cache_Data  # 0B
+/Users/lukemiles/Library/Application Support/1Password/Cache/No_Vary_Search  # 0B
+/Users/lukemiles/Library/Application Support/Granola/Code Cache/js  # 8KB
+/Users/lukemiles/Library/Application Support/Granola/Code Cache/wasm  # 8KB
+/Users/lukemiles/Library/Application Support/Granola/Code Cache/electron-preload  # 74KB
+/Users/lukemiles/Library/Application Support/Granola/GPUCache/data_1  # 270KB
+/Users/lukemiles/Library/Application Support/Granola/GPUCache/data_0  # 8KB
+/Users/lukemiles/Library/Application Support/Granola/GPUCache/index  # 263KB
+/Users/lukemiles/Library/Application Support/Granola/GPUCache/data_2  # 8KB
+/Users/lukemiles/Library/Application Support/Granola/GPUCache/data_3  # 8KB
+/Users/lukemiles/Library/Application Support/Granola/DawnGraphiteCache/data_1  # 270KB
+/Users/lukemiles/Library/Application Support/Granola/DawnGraphiteCache/data_0  # 8KB
+/Users/lukemiles/Library/Application Support/Granola/DawnGraphiteCache/index  # 263KB
+/Users/lukemiles/Library/Application Support/Granola/DawnGraphiteCache/data_2  # 8KB
+/Users/lukemiles/Library/Application Support/Granola/DawnGraphiteCache/data_3  # 8KB
+/Users/lukemiles/Library/Application Support/Granola/DawnWebGPUCache/data_1  # 270KB
+/Users/lukemiles/Library/Application Support/Granola/DawnWebGPUCache/data_0  # 8KB
+/Users/lukemiles/Library/Application Support/Granola/DawnWebGPUCache/index  # 263KB
+/Users/lukemiles/Library/Application Support/Granola/DawnWebGPUCache/data_2  # 8KB
+/Users/lukemiles/Library/Application Support/Granola/DawnWebGPUCache/data_3  # 8KB
+/Users/lukemiles/Library/Application Support/Granola/Cache/Cache_Data  # 16KB
+/Users/lukemiles/Library/Application Support/Granola/Cache/No_Vary_Search  # 8KB
+/Users/lukemiles/Library/Application Support/Minstrel/Code Cache/js  # 8KB
+/Users/lukemiles/Library/Application Support/Minstrel/Code Cache/wasm  # 8KB
+/Users/lukemiles/Library/Application Support/Minstrel/Code Cache/electron-preload  # 29KB
+/Users/lukemiles/Library/Application Support/Minstrel/GPUCache/data_1  # 270KB
+/Users/lukemiles/Library/Application Support/Minstrel/GPUCache/data_0  # 8KB
+/Users/lukemiles/Library/Application Support/Minstrel/GPUCache/index  # 263KB
+/Users/lukemiles/Library/Application Support/Minstrel/GPUCache/data_2  # 8KB
+/Users/lukemiles/Library/Application Support/Minstrel/GPUCache/data_3  # 8KB
+/Users/lukemiles/Library/Application Support/Minstrel/DawnGraphiteCache/data_1  # 270KB
+/Users/lukemiles/Library/Application Support/Minstrel/DawnGraphiteCache/data_0  # 8KB
+/Users/lukemiles/Library/Application Support/Minstrel/DawnGraphiteCache/index  # 263KB
+/Users/lukemiles/Library/Application Support/Minstrel/DawnGraphiteCache/data_2  # 8KB
+/Users/lukemiles/Library/Application Support/Minstrel/DawnGraphiteCache/data_3  # 8KB
+/Users/lukemiles/Library/Application Support/Minstrel/DawnWebGPUCache/data_1  # 270KB
+/Users/lukemiles/Library/Application Support/Minstrel/DawnWebGPUCache/data_0  # 8KB
+/Users/lukemiles/Library/Application Support/Minstrel/DawnWebGPUCache/index  # 263KB
+/Users/lukemiles/Library/Application Support/Minstrel/DawnWebGPUCache/data_2  # 8KB
+/Users/lukemiles/Library/Application Support/Minstrel/DawnWebGPUCache/data_3  # 8KB
+/Users/lukemiles/Library/Application Support/Minstrel/Cache/Cache_Data  # 0B
+/Users/lukemiles/Library/Application Support/Minstrel/Cache/No_Vary_Search  # 0B
+/Users/lukemiles/Library/Application Support/steam-rom-manager/Code Cache/js  # 8KB
+/Users/lukemiles/Library/Application Support/steam-rom-manager/Code Cache/wasm  # 8KB
+/Users/lukemiles/Library/Application Support/steam-rom-manager/GPUCache/data_1  # 270KB
+/Users/lukemiles/Library/Application Support/steam-rom-manager/GPUCache/data_0  # 45KB
+/Users/lukemiles/Library/Application Support/steam-rom-manager/GPUCache/index  # 263KB
+/Users/lukemiles/Library/Application Support/steam-rom-manager/GPUCache/data_2  # 1.1MB
+/Users/lukemiles/Library/Application Support/steam-rom-manager/GPUCache/data_3  # 8KB
+/Users/lukemiles/Library/Application Support/steam-rom-manager/DawnGraphiteCache/data_1  # 270KB
+/Users/lukemiles/Library/Application Support/steam-rom-manager/DawnGraphiteCache/data_0  # 8KB
+/Users/lukemiles/Library/Application Support/steam-rom-manager/DawnGraphiteCache/index  # 263KB
+/Users/lukemiles/Library/Application Support/steam-rom-manager/DawnGraphiteCache/data_2  # 8KB
+/Users/lukemiles/Library/Application Support/steam-rom-manager/DawnGraphiteCache/data_3  # 8KB
+/Users/lukemiles/Library/Application Support/steam-rom-manager/DawnWebGPUCache/data_1  # 270KB
+/Users/lukemiles/Library/Application Support/steam-rom-manager/DawnWebGPUCache/data_0  # 8KB
+/Users/lukemiles/Library/Application Support/steam-rom-manager/DawnWebGPUCache/index  # 263KB
+/Users/lukemiles/Library/Application Support/steam-rom-manager/DawnWebGPUCache/data_2  # 8KB
+/Users/lukemiles/Library/Application Support/steam-rom-manager/DawnWebGPUCache/data_3  # 8KB
+/Users/lukemiles/Library/Application Support/steam-rom-manager/Cache/Cache_Data  # 2.8MB
+
+# ============================================
+# Summary
+# ============================================
+# Potential cleanup: 4.84GB
+# Items: 655
+# Categories: 6

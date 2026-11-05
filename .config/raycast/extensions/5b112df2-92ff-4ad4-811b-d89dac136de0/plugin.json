@@ -1,0 +1,9 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "orion",
+  "description": "Manage your Orion Bookmarks, History, Tabs, and Reading list",
+  "author": {
+    "name": "plonq"
+  },
+  "license": "MIT"
+}

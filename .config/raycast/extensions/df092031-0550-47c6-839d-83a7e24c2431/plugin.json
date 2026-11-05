@@ -1,0 +1,10 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "app-icon-generator",
+  "description": "Generate icons for multiple platforms: iOS, Android, macOS, and more.",
+  "author": {
+    "name": "HunterJi"
+  },
+  "license": "MIT",
+  "version": "1.2.0"
+}

@@ -1,0 +1,9 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "helium",
+  "description": "Navigate open tabs, bookmarks, and the web in Helium browser",
+  "author": {
+    "name": "islamtayeb"
+  },
+  "license": "MIT"
+}

@@ -1,0 +1,9 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "obsidian-bookmarks",
+  "description": "Manage your bookmarked links with Obsidian. Save, search, and access your bookmarks. Supports Safari, Arc and other Chromium-based browsers",
+  "author": {
+    "name": "dru89"
+  },
+  "license": "MIT"
+}

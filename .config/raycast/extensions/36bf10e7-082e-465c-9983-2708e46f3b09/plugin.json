@@ -1,0 +1,9 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "obsidian-smart-capture",
+  "description": "Smart capture anything into Obsidian",
+  "author": {
+    "name": "millin_gabani"
+  },
+  "license": "MIT"
+}

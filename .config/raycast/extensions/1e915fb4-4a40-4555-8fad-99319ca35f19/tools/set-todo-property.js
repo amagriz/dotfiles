@@ -1,21 +1,29 @@
-"use strict";var F=Object.create;var b=Object.defineProperty;var B=Object.getOwnPropertyDescriptor;var G=Object.getOwnPropertyNames;var K=Object.getPrototypeOf,J=Object.prototype.hasOwnProperty;var H=(r,t)=>{for(var e in t)b(r,e,{get:t[e],enumerable:!0})},R=(r,t,e,a)=>{if(t&&typeof t=="object"||typeof t=="function")for(let n of G(t))!J.call(r,n)&&n!==e&&b(r,n,{get:()=>t[n],enumerable:!(a=B(t,n))||a.enumerable});return r};var w=(r,t,e)=>(e=r!=null?F(K(r)):{},R(t||!r||!r.__esModule?b(e,"default",{value:r,enumerable:!0}):e,r)),Z=r=>R(b({},"__esModule",{value:!0}),r);var de={};H(de,{default:()=>fe});module.exports=Z(de);var m=require("@raycast/api");var f=w(require("react")),o=require("@raycast/api");var U=w(require("node:child_process")),C=require("node:buffer"),p=w(require("node:stream")),O=require("node:util");var j=require("react/jsx-runtime");var k=globalThis;var $=r=>!!r&&typeof r=="object"&&typeof r.removeListener=="function"&&typeof r.emit=="function"&&typeof r.reallyExit=="function"&&typeof r.listeners=="function"&&typeof r.kill=="function"&&typeof r.pid=="number"&&typeof r.on=="function",x=Symbol.for("signal-exit emitter"),S=class{constructor(){if(this.emitted={afterExit:!1,exit:!1},this.listeners={afterExit:[],exit:[]},this.count=0,this.id=Math.random(),k[x])return k[x];Object.defineProperty(k,x,{value:this,writable:!1,enumerable:!1,configurable:!1})}on(t,e){this.listeners[t].push(e)}removeListener(t,e){let a=this.listeners[t],n=a.indexOf(e);n!==-1&&(n===0&&a.length===1?a.length=0:a.splice(n,1))}emit(t,e,a){if(this.emitted[t])return!1;this.emitted[t]=!0;let n=!1;for(let s of this.listeners[t])n=s(e,a)===!0||n;return t==="exit"&&(n=this.emit("afterExit",e,a)||n),n}},E=class{onExit(){return()=>{}}load(){}unload(){}},P=class{#o;#t;#e;#s;#i;#a;#n;#r;constructor(t){this.#o=process.platform==="win32"?"SIGINT":"SIGHUP",this.#t=new S,this.#a={},this.#n=!1,this.#r=[],this.#r.push("SIGHUP","SIGINT","SIGTERM"),globalThis.process.platform!=="win32"&&this.#r.push("SIGALRM","SIGABRT","SIGVTALRM","SIGXCPU","SIGXFSZ","SIGUSR2","SIGTRAP","SIGSYS","SIGQUIT","SIGIOT"),globalThis.process.platform==="linux"&&this.#r.push("SIGIO","SIGPOLL","SIGPWR","SIGSTKFLT"),this.#e=t,this.#a={};for(let e of this.#r)this.#a[e]=()=>{let a=this.#e.listeners(e),{count:n}=this.#t,s=t;if(typeof s.__signal_exit_emitter__=="object"&&typeof s.__signal_exit_emitter__.count=="number"&&(n+=s.__signal_exit_emitter__.count),a.length===n){this.unload();let i=this.#t.emit("exit",null,e),c=e==="SIGHUP"?this.#o:e;i||t.kill(t.pid,c)}};this.#i=t.reallyExit,this.#s=t.emit}onExit(t,e){if(!$(this.#e))return()=>{};this.#n===!1&&this.load();let a=e?.alwaysLast?"afterExit":"exit";return this.#t.on(a,t),()=>{this.#t.removeListener(a,t),this.#t.listeners.exit.length===0&&this.#t.listeners.afterExit.length===0&&this.unload()}}load(){if(!this.#n){this.#n=!0,this.#t.count+=1;for(let t of this.#r)try{let e=this.#a[t];e&&this.#e.on(t,e)}catch{}this.#e.emit=(t,...e)=>this.#l(t,...e),this.#e.reallyExit=t=>this.#c(t)}}unload(){this.#n&&(this.#n=!1,this.#r.forEach(t=>{let e=this.#a[t];if(!e)throw new Error("Listener not defined for signal: "+t);try{this.#e.removeListener(t,e)}catch{}}),this.#e.emit=this.#s,this.#e.reallyExit=this.#i,this.#t.count-=1)}#c(t){return $(this.#e)?(this.#e.exitCode=t||0,this.#t.emit("exit",this.#e.exitCode,null),this.#i.call(this.#e,this.#e.exitCode)):0}#l(t,...e){let a=this.#s;if(t==="exit"&&$(this.#e)){typeof e[0]=="number"&&(this.#e.exitCode=e[0]);let n=a.call(this.#e,t,...e);return this.#t.emit("exit",this.#e.exitCode,null),n}else return a.call(this.#e,t,...e)}},v=null,q=(r,t)=>(v||(v=$(process)?new P(process):new E),v.onExit(r,t));function Y(r,{timeout:t}={}){let e=new Promise((c,l)=>{r.on("exit",(u,h)=>{c({exitCode:u,signal:h,timedOut:!1})}),r.on("error",u=>{l(u)}),r.stdin&&r.stdin.on("error",u=>{l(u)})}),a=q(()=>{r.kill()});if(t===0||t===void 0)return e.finally(()=>a());let n,s=new Promise((c,l)=>{n=setTimeout(()=>{r.kill("SIGTERM"),l(Object.assign(new Error("Timed out"),{timedOut:!0,signal:"SIGTERM"}))},t)}),i=e.finally(()=>{clearTimeout(n)});return Promise.race([s,i]).finally(()=>a())}var A=class extends Error{constructor(){super("The output is too big"),this.name="MaxBufferError"}};function X(r){let{encoding:t}=r,e=t==="buffer",a=new p.default.PassThrough({objectMode:!1});t&&t!=="buffer"&&a.setEncoding(t);let n=0,s=[];return a.on("data",i=>{s.push(i),n+=i.length}),a.getBufferedValue=()=>e?Buffer.concat(s,n):s.join(""),a.getBufferedLength=()=>n,a}async function T(r,t){let e=X(t);return await new Promise((a,n)=>{let s=i=>{i&&e.getBufferedLength()<=C.constants.MAX_LENGTH&&(i.bufferedData=e.getBufferedValue()),n(i)};(async()=>{try{await(0,O.promisify)(p.default.pipeline)(r,e),a()}catch(i){s(i)}})(),e.on("data",()=>{e.getBufferedLength()>8e7&&s(new A)})}),e.getBufferedValue()}async function _(r,t){r.destroy();try{return await t}catch(e){return e.bufferedData}}async function Q({stdout:r,stderr:t},{encoding:e},a){let n=T(r,{encoding:e}),s=T(t,{encoding:e});try{return await Promise.all([a,n,s])}catch(i){return Promise.all([{error:i,exitCode:null,signal:i.signal,timedOut:i.timedOut||!1},_(r,n),_(t,s)])}}function ee(r){let t=typeof r=="string"?`
-`:10,e=typeof r=="string"?"\r":13;return r[r.length-1]===t&&(r=r.slice(0,-1)),r[r.length-1]===e&&(r=r.slice(0,-1)),r}function I(r,t){return r.stripFinalNewline?ee(t):t}function te({timedOut:r,timeout:t,signal:e,exitCode:a}){return r?`timed out after ${t} milliseconds`:e!=null?`was killed with ${e}`:a!=null?`failed with exit code ${a}`:"failed"}function re({stdout:r,stderr:t,error:e,signal:a,exitCode:n,command:s,timedOut:i,options:c,parentError:l}){let h=`Command ${te({timedOut:i,timeout:c?.timeout,signal:a,exitCode:n})}: ${s}`,g=e?`${h}
-${e.message}`:h,y=[g,t,r].filter(Boolean).join(`
-`);return e?e.originalMessage=e.message:e=l,e.message=y,e.shortMessage=g,e.command=s,e.exitCode=n,e.signal=a,e.stdout=r,e.stderr=t,"bufferedData"in e&&delete e.bufferedData,e}function ne({stdout:r,stderr:t,error:e,exitCode:a,signal:n,timedOut:s,command:i,options:c,parentError:l}){if(e||a!==0||n!==null)throw re({error:e,exitCode:a,signal:n,stdout:r,stderr:t,command:i,timedOut:s,options:c,parentError:l});return r}async function D(r,t,e){if(process.platform!=="darwin")throw new Error("AppleScript is only supported on macOS");let{humanReadableOutput:a,language:n,timeout:s,...i}=Array.isArray(t)?e||{}:t||{},c=a!==!1?[]:["-ss"];n==="JavaScript"&&c.push("-l","JavaScript"),Array.isArray(t)&&c.push("-",...t);let l=U.default.spawn("osascript",c,{...i,env:{PATH:"/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin"}}),u=Y(l,{timeout:s??1e4});l.stdin.end(r);let[{error:h,exitCode:g,signal:y,timedOut:N},M,z]=await Q(l,{encoding:"utf8"},u),W=I({stripFinalNewline:!0},M),V=I({stripFinalNewline:!0},z);return ne({stdout:W,stderr:V,error:h,exitCode:g,signal:y,timedOut:N,command:"osascript",options:e,parentError:new Error})}var ae=(0,m.getPreferenceValues)(),d=class extends Error{constructor(e,a,n,s){super(s?`${s}: ${e}`:e);this.type=a;this.originalError=n;this.operation=s;this.name="ThingsError"}},se=async(r,t)=>{try{let e=await D(`(function(){${r}})()`,{humanReadableOutput:!1,language:"JavaScript",timeout:6e4});return e?JSON.parse(e.replace(/:\s*undefined/g,": null")):void 0}catch(e){let n=(typeof e=="string"?e:e instanceof Error?e.message:String(e)).replace("execution error: Error: ","");throw n.match(/Application can't be found/i)?new d("Things application not found. Please make sure Things is installed and running.","APP_NOT_FOUND",n,t):n.match(/not allowed assistive access/i)||n.match(/permission/i)||n.match(/-1743/)?new d("Permission denied. Please grant Raycast access to Things in System Settings > Privacy & Security > Automation > Raycast > Things.","PERMISSION_DENIED",n,t):n.match(/doesn't understand/i)||n.match(/can't get/i)?new d("Things automation interface error. This might be due to a Things version incompatibility or the app not being ready.","EXECUTION_ERROR",n,t):n.match(/timed out/i)?new d("Command timed out. Things may be unresponsive or not running.","EXECUTION_ERROR",n,t):new d(`Unexpected error: ${n}`,"UNKNOWN_ERROR",n,t)}};var L=(r,t,e)=>se(`
-  const things = Application('${ae.thingsAppIdentifier}');
-  things.toDos.byId('${r}').${t} = '${e}';
-`,"Set todo property");var ie="tag => tag.name()",oe=`todo => {
+"use strict";var h=Object.create;var p=Object.defineProperty;var S=Object.getOwnPropertyDescriptor;var A=Object.getOwnPropertyNames;var y=Object.getPrototypeOf,I=Object.prototype.hasOwnProperty;var j=(e,r)=>{for(var a in r)p(e,a,{get:r[a],enumerable:!0})},g=(e,r,a,s)=>{if(r&&typeof r=="object"||typeof r=="function")for(let n of A(r))!I.call(e,n)&&n!==a&&p(e,n,{get:()=>r[n],enumerable:!(s=S(r,n))||s.enumerable});return e};var D=(e,r,a)=>(a=e!=null?h(y(e)):{},g(r||!e||!e.__esModule?p(a,"default",{value:e,enumerable:!0}):a,e)),L=e=>g(p({},"__esModule",{value:!0}),e);var B={};j(B,{default:()=>J});module.exports=L(B);var c=require("@raycast/api"),v=D(require("query-string"));var f=require("@raycast/utils");var t=require("@raycast/api"),C=D(require("dayjs")),Y={inbox:{title:"Inbox",icon:{source:t.Icon.Tray,tintColor:t.Color.Blue}},today:{title:"Today",icon:{source:t.Icon.Star,tintColor:t.Color.Yellow}},evening:{title:"This Evening",icon:{source:t.Icon.Moon,tintColor:t.Color.Purple}},tomorrow:{title:"Tomorrow",icon:{source:t.Icon.ArrowClockwise,tintColor:t.Color.Orange}},upcoming:{title:"Upcoming",icon:{source:t.Icon.Calendar,tintColor:t.Color.Red}},anytime:{title:"Anytime",icon:{source:t.Icon.Layers,tintColor:t.Color.Green}},someday:{title:"Someday",icon:{source:t.Icon.Folder,tintColor:t.Color.SecondaryText}},logbook:{title:"Logbook",icon:{source:t.Icon.CheckCircle,tintColor:t.Color.Green}},list:e=>({title:e.name,icon:e.type==="area"?{source:t.Icon.Folder,tintColor:t.Color.Green}:{source:t.Icon.Circle,tintColor:t.Color.Blue}})},G={open:t.Icon.Circle,completed:{source:t.Icon.CheckCircle,tintColor:t.Color.Blue},canceled:{source:t.Icon.XMarkCircle,tintColor:t.Color.SecondaryText}},K={open:t.Icon.Circle,completed:t.Icon.CheckCircle,canceled:t.Icon.XMarkCircle};var o=class extends Error{constructor(a,s,n,u){super(u?`${u}: ${a}`:a);this.type=s;this.originalError=n;this.operation=u;this.name="ThingsError"}type;originalError;operation},T=async(e,r)=>{try{let a=await(0,f.runAppleScript)(`JSON.stringify((function(){${e}})())`,{language:"JavaScript",timeout:6e4});return a?JSON.parse(a):void 0}catch(a){let n=(typeof a=="string"?a:a instanceof Error?a.message:String(a)).replace("execution error: Error: ","");throw n.match(/Application can't be found/i)?new o("Things application not found. Please make sure Things is installed and running.","APP_NOT_FOUND",n,r):n.match(/not allowed assistive access/i)||n.match(/permission/i)||n.match(/-1743/)?new o("Permission denied. Please grant Raycast access to Things in System Settings > Privacy & Security > Automation > Raycast > Things.","PERMISSION_DENIED",n,r):n.match(/doesn't understand/i)||n.match(/can't get/i)?new o("Things automation interface error. This might be due to a Things version incompatibility or the app not being ready.","EXECUTION_ERROR",n,r):n.match(/timed out/i)?new o("Command timed out. Things may be unresponsive or not running.","EXECUTION_ERROR",n,r):new o(`Unexpected error: ${n}`,"UNKNOWN_ERROR",n,r)}};function l(e){return e.replace(/\\/g,"\\\\").replace(/'/g,"\\'")}var i=`(d => {
+  const y = d.getFullYear();
+  const m = String(d.getMonth() + 1).padStart(2, '0');
+  const day = String(d.getDate()).padStart(2, '0');
+  return y + '-' + m + '-' + day;
+})`,P="tag => tag.name()",$=`tag => {
+  const props = tag.properties();
+  const parentRef = props.parentTag;
+  return {
+    name: props.name,
+    parent: parentRef ? parentRef.name() : null
+  };
+}`,O=`todo => {
   const props = todo.properties();
   return {
     id: props.id,
     name: props.name,
     status: props.status,
-    notes: props.notes,
+    notes: props.notes || '',
     tags: todo.tagNames(),
-    dueDate: props.dueDate ? props.dueDate.toISOString() : null,
-    activationDate: props.activationDate ? props.activationDate.toISOString() : null,
+    areaTags: null,
+    dueDate: props.dueDate ? ${i}(props.dueDate) : '',
+    activationDate: props.activationDate ? ${i}(props.activationDate) : '',
+    creationDate: props.creationDate ? props.creationDate.toISOString() : '',
   };
-}`,ce=`project => {
+}`,w=`project => {
   const props = project.properties();
   const areaRef = props.area;
   let area = null;
@@ -27,31 +35,96 @@ ${e.message}`:h,y=[g,t,r].filter(Boolean).join(`
     id: props.id,
     name: props.name,
     status: props.status,
-    notes: props.notes,
+    notes: props.notes || '',
     tags: project.tagNames(),
-    dueDate: props.dueDate ? props.dueDate.toISOString() : null,
-    activationDate: props.activationDate ? props.activationDate.toISOString() : null,
+    dueDate: props.dueDate ? ${i}(props.dueDate) : '',
+    activationDate: props.activationDate ? ${i}(props.activationDate) : '',
     area,
-    todos: project.toDos().map(${oe})
+    todos: project.toDos().map(${O})
   };
-}`,le=`todo => {
+}`,b=`todo => {
   const props = todo.properties();
   return {
     id: props.id,
     name: props.name,
     status: props.status,
-    notes: props.notes,
+    notes: props.notes || '',
     tags: todo.tagNames(),
-    dueDate: props.dueDate ? props.dueDate.toISOString() : null,
-    activationDate: props.activationDate ? props.activationDate.toISOString() : null,
+    areaTags: null,
+    dueDate: props.dueDate ? ${i}(props.dueDate) : '',
+    activationDate: props.activationDate ? ${i}(props.activationDate) : '',
+    creationDate: props.creationDate ? props.creationDate.toISOString() : '',
     isProject: props.pcls === "project",
   };
-}`,ue=`area => {
+}`,M=`area => {
   const props = area.properties();
   return {
     id: props.id,
     name: props.name,
     tags: area.tagNames(),
-    todos: area.toDos().map(${le})
+    todos: area.toDos().map(${b})
   };
-}`,ye=[{name:"tags",needs:["tags"],expr:`things.tags().map(${ie})`},{name:"projects",needs:["projects","lists"],expr:`things.projects().map(${ce})`},{name:"areas",needs:["areas","lists"],expr:`things.areas().map(${ue})`}];async function fe({todoId:r,key:t,value:e}){return await L(r,t,e)}
+}`;var V=[{name:"tags",needs:["tags"],expr:`things.tags().map(${P})`},{name:"tagsWithHierarchy",needs:["tagsWithHierarchy"],expr:`things.tags().map(${$})`},{name:"projects",needs:["projects","lists"],expr:`things.projects().map(${w})`},{name:"areas",needs:["areas","lists"],expr:`things.areas().map(${M})`}];var k=require("@raycast/utils");var d=69760;var m=e=>`(SELECT GROUP_CONCAT(tg.title, ', ') FROM TMTaskTag tt JOIN TMTag tg ON tg.uuid = tt.tags WHERE tt.tasks = ${e}.uuid)`;var F=`
+  t.uuid as id,
+  t.title as name,
+  t.deadline,
+  t.startDate,
+  NULLIF(t.rt1_nextInstanceStartDate, ${d}) as nextInstanceStartDate,
+  t.rt1_recurrenceRule as recurrenceRule,
+  (t.rt1_recurrenceRule IS NOT NULL OR t.rt1_repeatingTemplate IS NOT NULL) as isRecurring,
+  p.title as projectName,
+  p.uuid as projectId,
+  COALESCE(a.title, pa.title) as areaName,
+  COALESCE(a.uuid, pa.uuid) as areaId`,it=`${F},
+  t.status,
+  COALESCE(t.notes, '') as notes,
+  ${m("t")} as tagList`,_="COALESCE(p.trashed, 0) = 0",ct=`t.type = 0 AND t.trashed = 0 AND t.status = 0 AND ${_}`;var ut=`
+    SELECT
+      t.uuid as id,
+      t.title as name,
+      t.deadline,
+      t.startDate,
+      NULLIF(t.rt1_nextInstanceStartDate, ${d}) as nextInstanceStartDate,
+      t.rt1_recurrenceRule as recurrenceRule,
+      (t.rt1_recurrenceRule IS NOT NULL OR t.rt1_repeatingTemplate IS NOT NULL) as isRecurring,
+      t.type,
+      t.status,
+      COALESCE(t.notes, '') as notes,
+      ${m("t")} as tagList,
+      p.uuid as projectId,
+      p.title as projectName,
+      p.status as projectStatus,
+      NULLIF(p.deadline, 0) as projectDeadline,
+      NULLIF(p.startDate, 0) as projectStartDate,
+      NULLIF(p.rt1_nextInstanceStartDate, ${d}) as projectNextInstanceStartDate,
+      p.rt1_recurrenceRule as projectRecurrenceRule,
+      COALESCE(p.notes, '') as projectNotes,
+      ${m("p")} as projectTagList,
+      pa.uuid as projectAreaId,
+      pa.title as projectAreaName,
+      a.uuid as areaId,
+      a.title as areaName,
+      (SELECT GROUP_CONCAT(tg.title, ', ') FROM TMAreaTag at2 JOIN TMTag tg ON tg.uuid = at2.tags WHERE at2.areas = COALESCE(a.uuid, pa.uuid)) as areaTagList,
+      t.creationDate as creationDateRaw
+    FROM TMTask t
+    LEFT JOIN TMTask p ON t.project = p.uuid
+    LEFT JOIN TMArea pa ON p.area = pa.uuid
+    LEFT JOIN TMArea a ON t.area = a.uuid`,U=`
+    EXISTS (
+      SELECT 1 FROM TMTask i
+      WHERE i.rt1_repeatingTemplate = t.uuid
+        AND i.trashed = 0
+        AND i.status = 0
+    )`,pt=`
+  AND NOT (
+    t.rt1_repeatingTemplate IS NULL
+    AND t.rt1_recurrenceRule IS NOT NULL
+    AND ${U}
+  )`;var H=(0,c.getPreferenceValues)();var W=["dueDate","activationDate","completionDate","cancellationDate"],N=(e,r,a)=>{let s;if(W.includes(r)){let[u,R,E]=a.split("-").map(Number);s=`new Date(${u}, ${R-1}, ${E})`}else s=`'${l(a)}'`;let n=r==="status"?`
+  if (todo.status() !== ${s}) {
+    throw new Error("Things ignored the status change. If this is a repeating to-do, complete or cancel its scheduled occurrence instead.");
+  }`:"";return T(`
+  const things = Application('${H.thingsAppIdentifier}');
+  const todo = things.toDos.byId('${l(e)}');
+  todo.${r} = ${s};${n}
+`,"Set todo property")};async function J({todoId:e,key:r,value:a}){return await N(e,r,a)}

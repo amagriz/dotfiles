@@ -1,0 +1,9 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "clean-keyboard",
+  "description": "Lock your keyboard to clean it easily",
+  "author": {
+    "name": "ike-gg"
+  },
+  "license": "MIT"
+}

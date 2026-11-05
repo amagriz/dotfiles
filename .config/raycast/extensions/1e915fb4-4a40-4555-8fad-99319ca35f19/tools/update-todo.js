@@ -1,15 +1,29 @@
-"use strict";var V=Object.create;var m=Object.defineProperty;var B=Object.getOwnPropertyDescriptor;var G=Object.getOwnPropertyNames;var K=Object.getPrototypeOf,J=Object.prototype.hasOwnProperty;var S=(e,t)=>{for(var r in t)m(e,r,{get:t[r],enumerable:!0})},E=(e,t,r,n)=>{if(t&&typeof t=="object"||typeof t=="function")for(let a of G(t))!J.call(e,a)&&a!==r&&m(e,a,{get:()=>t[a],enumerable:!(n=B(t,a))||n.enumerable});return e};var H=(e,t,r)=>(r=e!=null?V(K(e)):{},E(t||!e||!e.__esModule?m(r,"default",{value:e,enumerable:!0}):r,e)),Z=e=>E(m({},"__esModule",{value:!0}),e);var de={};S(de,{default:()=>fe});module.exports=Z(de);var L=require("child_process"),M=require("util"),h=require("@raycast/api");var f=H(require("react")),u=require("@raycast/api");var v=require("react/jsx-runtime");var x={};S(x,{exclude:()=>ne,extract:()=>w,parse:()=>k,parseUrl:()=>j,pick:()=>N,stringify:()=>O,stringifyUrl:()=>D});var R="%[a-f0-9]{2}",A=new RegExp("("+R+")|([^%]+?)","gi"),P=new RegExp("("+R+")+","gi");function b(e,t){try{return[decodeURIComponent(e.join(""))]}catch{}if(e.length===1)return e;t=t||1;let r=e.slice(0,t),n=e.slice(t);return Array.prototype.concat.call([],b(r),b(n))}function q(e){try{return decodeURIComponent(e)}catch{let t=e.match(A)||[];for(let r=1;r<t.length;r++)e=b(t,r).join(""),t=e.match(A)||[];return e}}function Y(e){let t={"%FE%FF":"\uFFFD\uFFFD","%FF%FE":"\uFFFD\uFFFD"},r=P.exec(e);for(;r;){try{t[r[0]]=decodeURIComponent(r[0])}catch{let a=q(r[0]);a!==r[0]&&(t[r[0]]=a)}r=P.exec(e)}t["%C2"]="\uFFFD";let n=Object.keys(t);for(let a of n)e=e.replace(new RegExp(a,"g"),t[a]);return e}function y(e){if(typeof e!="string")throw new TypeError("Expected `encodedURI` to be of type `string`, got `"+typeof e+"`");try{return decodeURIComponent(e)}catch{return Y(e)}}function T(e,t){let r={};if(Array.isArray(t))for(let n of t){let a=Object.getOwnPropertyDescriptor(e,n);a?.enumerable&&Object.defineProperty(r,n,a)}else for(let n of Reflect.ownKeys(e)){let a=Object.getOwnPropertyDescriptor(e,n);if(a.enumerable){let i=e[n];t(n,i,e)&&Object.defineProperty(r,n,a)}}return r}function g(e,t){if(!(typeof e=="string"&&typeof t=="string"))throw new TypeError("Expected the arguments to be of type `string`");if(e===""||t==="")return[];let r=e.indexOf(t);return r===-1?[]:[e.slice(0,r),e.slice(r+t.length)]}var X=e=>e==null,Q=e=>encodeURIComponent(e).replaceAll(/[!'()*]/g,t=>`%${t.charCodeAt(0).toString(16).toUpperCase()}`),$=Symbol("encodeFragmentIdentifier");function ee(e){switch(e.arrayFormat){case"index":return t=>(r,n)=>{let a=r.length;return n===void 0||e.skipNull&&n===null||e.skipEmptyString&&n===""?r:n===null?[...r,[c(t,e),"[",a,"]"].join("")]:[...r,[c(t,e),"[",c(a,e),"]=",c(n,e)].join("")]};case"bracket":return t=>(r,n)=>n===void 0||e.skipNull&&n===null||e.skipEmptyString&&n===""?r:n===null?[...r,[c(t,e),"[]"].join("")]:[...r,[c(t,e),"[]=",c(n,e)].join("")];case"colon-list-separator":return t=>(r,n)=>n===void 0||e.skipNull&&n===null||e.skipEmptyString&&n===""?r:n===null?[...r,[c(t,e),":list="].join("")]:[...r,[c(t,e),":list=",c(n,e)].join("")];case"comma":case"separator":case"bracket-separator":{let t=e.arrayFormat==="bracket-separator"?"[]=":"=";return r=>(n,a)=>a===void 0||e.skipNull&&a===null||e.skipEmptyString&&a===""?n:(a=a===null?"":a,n.length===0?[[c(r,e),t,c(a,e)].join("")]:[[n,c(a,e)].join(e.arrayFormatSeparator)])}default:return t=>(r,n)=>n===void 0||e.skipNull&&n===null||e.skipEmptyString&&n===""?r:n===null?[...r,c(t,e)]:[...r,[c(t,e),"=",c(n,e)].join("")]}}function te(e){let t;switch(e.arrayFormat){case"index":return(r,n,a)=>{if(t=/\[(\d*)]$/.exec(r),r=r.replace(/\[\d*]$/,""),!t){a[r]=n;return}a[r]===void 0&&(a[r]={}),a[r][t[1]]=n};case"bracket":return(r,n,a)=>{if(t=/(\[])$/.exec(r),r=r.replace(/\[]$/,""),!t){a[r]=n;return}if(a[r]===void 0){a[r]=[n];return}a[r]=[...a[r],n]};case"colon-list-separator":return(r,n,a)=>{if(t=/(:list)$/.exec(r),r=r.replace(/:list$/,""),!t){a[r]=n;return}if(a[r]===void 0){a[r]=[n];return}a[r]=[...a[r],n]};case"comma":case"separator":return(r,n,a)=>{let s=typeof n=="string"&&n.includes(e.arrayFormatSeparator)?n.split(e.arrayFormatSeparator).map(o=>d(o,e)):n===null?n:d(n,e);a[r]=s};case"bracket-separator":return(r,n,a)=>{let i=/(\[])$/.test(r);if(r=r.replace(/\[]$/,""),!i){a[r]=n&&d(n,e);return}let s=n===null?[]:d(n,e).split(e.arrayFormatSeparator);if(a[r]===void 0){a[r]=s;return}a[r]=[...a[r],...s]};default:return(r,n,a)=>{if(a[r]===void 0){a[r]=n;return}a[r]=[...[a[r]].flat(),n]}}}function I(e){if(typeof e!="string"||e.length!==1)throw new TypeError("arrayFormatSeparator must be single character string")}function c(e,t){return t.encode?t.strict?Q(e):encodeURIComponent(e):e}function d(e,t){return t.decode?y(e):e}function C(e){return Array.isArray(e)?e.sort():typeof e=="object"?C(Object.keys(e)).sort((t,r)=>Number(t)-Number(r)).map(t=>e[t]):e}function _(e){let t=e.indexOf("#");return t!==-1&&(e=e.slice(0,t)),e}function re(e){let t="",r=e.indexOf("#");return r!==-1&&(t=e.slice(r)),t}function U(e,t,r){return r==="string"&&typeof e=="string"?e:typeof r=="function"&&typeof e=="string"?r(e):r==="boolean"&&e===null?!0:r==="boolean"&&e!==null&&(e.toLowerCase()==="true"||e.toLowerCase()==="false")?e.toLowerCase()==="true":r==="boolean"&&e!==null&&(e.toLowerCase()==="1"||e.toLowerCase()==="0")?e.toLowerCase()==="1":r==="string[]"&&t.arrayFormat!=="none"&&typeof e=="string"?[e]:r==="number[]"&&t.arrayFormat!=="none"&&!Number.isNaN(Number(e))&&typeof e=="string"&&e.trim()!==""?[Number(e)]:r==="number"&&!Number.isNaN(Number(e))&&typeof e=="string"&&e.trim()!==""?Number(e):t.parseBooleans&&e!==null&&(e.toLowerCase()==="true"||e.toLowerCase()==="false")?e.toLowerCase()==="true":t.parseNumbers&&!Number.isNaN(Number(e))&&typeof e=="string"&&e.trim()!==""?Number(e):e}function w(e){e=_(e);let t=e.indexOf("?");return t===-1?"":e.slice(t+1)}function k(e,t){t={decode:!0,sort:!0,arrayFormat:"none",arrayFormatSeparator:",",parseNumbers:!1,parseBooleans:!1,types:Object.create(null),...t},I(t.arrayFormatSeparator);let r=te(t),n=Object.create(null);if(typeof e!="string"||(e=e.trim().replace(/^[?#&]/,""),!e))return n;for(let a of e.split("&")){if(a==="")continue;let i=t.decode?a.replaceAll("+"," "):a,[s,o]=g(i,"=");s===void 0&&(s=i),o=o===void 0?null:["comma","separator","bracket-separator"].includes(t.arrayFormat)?o:d(o,t),r(d(s,t),o,n)}for(let[a,i]of Object.entries(n))if(typeof i=="object"&&i!==null&&t.types[a]!=="string")for(let[s,o]of Object.entries(i)){let l=t.types[a],p=typeof l=="function"?l:l?l.replace("[]",""):void 0;i[s]=U(o,t,p)}else typeof i=="object"&&i!==null&&t.types[a]==="string"?n[a]=Object.values(i).join(t.arrayFormatSeparator):n[a]=U(i,t,t.types[a]);return t.sort===!1?n:(t.sort===!0?Object.keys(n).sort():Object.keys(n).sort(t.sort)).reduce((a,i)=>{let s=n[i];return a[i]=s&&typeof s=="object"&&!Array.isArray(s)?C(s):s,a},Object.create(null))}function O(e,t){if(!e)return"";t={encode:!0,strict:!0,arrayFormat:"none",arrayFormatSeparator:",",...t},I(t.arrayFormatSeparator);let r=s=>t.skipNull&&X(e[s])||t.skipEmptyString&&e[s]==="",n=ee(t),a={};for(let[s,o]of Object.entries(e))r(s)||(a[s]=o);let i=Object.keys(a);return t.sort!==!1&&i.sort(t.sort),i.map(s=>{let o=e[s];if(t.replacer&&(o=t.replacer(s,o),o===void 0)||o===void 0)return"";if(o===null)return c(s,t);if(Array.isArray(o)){if(o.length===0&&t.arrayFormat==="bracket-separator")return c(s,t)+"[]";let l=o;return t.replacer&&(l=o.map((p,W)=>t.replacer(`${s}[${W}]`,p)).filter(p=>p!==void 0)),l.reduce(n(s),[]).join("&")}return c(s,t)+"="+c(o,t)}).filter(s=>s.length>0).join("&")}function j(e,t){t={decode:!0,...t};let[r,n]=g(e,"#");return r===void 0&&(r=e),{url:r?.split("?")?.[0]??"",query:k(w(e),t),...t&&t.parseFragmentIdentifier&&n?{fragmentIdentifier:d(n,t)}:{}}}function D(e,t){t={encode:!0,strict:!0,[$]:!0,...t};let r=_(e.url).split("?")[0]||"",n=w(e.url),a={...k(n,{sort:!1,...t}),...e.query},i=O(a,t);i&&=`?${i}`;let s=re(e.url);if(typeof e.fragmentIdentifier=="string"){let o=new URL(r);o.hash=e.fragmentIdentifier,s=t[$]?o.hash:`#${e.fragmentIdentifier}`}return`${r}${i}${s}`}function N(e,t,r){r={parseFragmentIdentifier:!0,[$]:!1,...r};let{url:n,query:a,fragmentIdentifier:i}=j(e,r);return D({url:n,query:T(a,t),fragmentIdentifier:i},r)}function ne(e,t,r){let n=Array.isArray(t)?a=>!t.includes(a):(a,i)=>!t(a,i);return N(e,n,r)}var F=x;var Re=(0,h.getPreferenceValues)();var ae="tag => tag.name()",se=`todo => {
+"use strict";var T=Object.create;var i=Object.defineProperty;var N=Object.getOwnPropertyDescriptor;var R=Object.getOwnPropertyNames;var E=Object.getPrototypeOf,h=Object.prototype.hasOwnProperty;var S=(e,a)=>{for(var r in a)i(e,r,{get:a[r],enumerable:!0})},p=(e,a,r,d)=>{if(a&&typeof a=="object"||typeof a=="function")for(let o of R(a))!h.call(e,o)&&o!==r&&i(e,o,{get:()=>a[o],enumerable:!(d=N(a,o))||d.enumerable});return e};var l=(e,a,r)=>(r=e!=null?T(E(e)):{},p(a||!e||!e.__esModule?i(r,"default",{value:e,enumerable:!0}):r,e)),A=e=>p(i({},"__esModule",{value:!0}),e);var v={};S(v,{default:()=>U});module.exports=A(v);var m=require("child_process"),g=require("util"),s=require("@raycast/api"),D=l(require("query-string"));var j=require("@raycast/utils");var t=require("@raycast/api"),y=l(require("dayjs")),J={inbox:{title:"Inbox",icon:{source:t.Icon.Tray,tintColor:t.Color.Blue}},today:{title:"Today",icon:{source:t.Icon.Star,tintColor:t.Color.Yellow}},evening:{title:"This Evening",icon:{source:t.Icon.Moon,tintColor:t.Color.Purple}},tomorrow:{title:"Tomorrow",icon:{source:t.Icon.ArrowClockwise,tintColor:t.Color.Orange}},upcoming:{title:"Upcoming",icon:{source:t.Icon.Calendar,tintColor:t.Color.Red}},anytime:{title:"Anytime",icon:{source:t.Icon.Layers,tintColor:t.Color.Green}},someday:{title:"Someday",icon:{source:t.Icon.Folder,tintColor:t.Color.SecondaryText}},logbook:{title:"Logbook",icon:{source:t.Icon.CheckCircle,tintColor:t.Color.Green}},list:e=>({title:e.name,icon:e.type==="area"?{source:t.Icon.Folder,tintColor:t.Color.Green}:{source:t.Icon.Circle,tintColor:t.Color.Blue}})},B={open:t.Icon.Circle,completed:{source:t.Icon.CheckCircle,tintColor:t.Color.Blue},canceled:{source:t.Icon.XMarkCircle,tintColor:t.Color.SecondaryText}},q={open:t.Icon.Circle,completed:t.Icon.CheckCircle,canceled:t.Icon.XMarkCircle};var n=`(d => {
+  const y = d.getFullYear();
+  const m = String(d.getMonth() + 1).padStart(2, '0');
+  const day = String(d.getDate()).padStart(2, '0');
+  return y + '-' + m + '-' + day;
+})`,L="tag => tag.name()",C=`tag => {
+  const props = tag.properties();
+  const parentRef = props.parentTag;
+  return {
+    name: props.name,
+    parent: parentRef ? parentRef.name() : null
+  };
+}`,x=`todo => {
   const props = todo.properties();
   return {
     id: props.id,
     name: props.name,
     status: props.status,
-    notes: props.notes,
+    notes: props.notes || '',
     tags: todo.tagNames(),
-    dueDate: props.dueDate ? props.dueDate.toISOString() : null,
-    activationDate: props.activationDate ? props.activationDate.toISOString() : null,
+    areaTags: null,
+    dueDate: props.dueDate ? ${n}(props.dueDate) : '',
+    activationDate: props.activationDate ? ${n}(props.activationDate) : '',
+    creationDate: props.creationDate ? props.creationDate.toISOString() : '',
   };
-}`,ie=`project => {
+}`,P=`project => {
   const props = project.properties();
   const areaRef = props.area;
   let area = null;
@@ -21,31 +35,89 @@
     id: props.id,
     name: props.name,
     status: props.status,
-    notes: props.notes,
+    notes: props.notes || '',
     tags: project.tagNames(),
-    dueDate: props.dueDate ? props.dueDate.toISOString() : null,
-    activationDate: props.activationDate ? props.activationDate.toISOString() : null,
+    dueDate: props.dueDate ? ${n}(props.dueDate) : '',
+    activationDate: props.activationDate ? ${n}(props.activationDate) : '',
     area,
-    todos: project.toDos().map(${se})
+    todos: project.toDos().map(${x})
   };
-}`,oe=`todo => {
+}`,$=`todo => {
   const props = todo.properties();
   return {
     id: props.id,
     name: props.name,
     status: props.status,
-    notes: props.notes,
+    notes: props.notes || '',
     tags: todo.tagNames(),
-    dueDate: props.dueDate ? props.dueDate.toISOString() : null,
-    activationDate: props.activationDate ? props.activationDate.toISOString() : null,
+    areaTags: null,
+    dueDate: props.dueDate ? ${n}(props.dueDate) : '',
+    activationDate: props.activationDate ? ${n}(props.activationDate) : '',
+    creationDate: props.creationDate ? props.creationDate.toISOString() : '',
     isProject: props.pcls === "project",
   };
-}`,ce=`area => {
+}`,O=`area => {
   const props = area.properties();
   return {
     id: props.id,
     name: props.name,
     tags: area.tagNames(),
-    todos: area.toDos().map(${oe})
+    todos: area.toDos().map(${$})
   };
-}`,Te=[{name:"tags",needs:["tags"],expr:`things.tags().map(${ae})`},{name:"projects",needs:["projects","lists"],expr:`things.projects().map(${ie})`},{name:"areas",needs:["areas","lists"],expr:`things.areas().map(${ce})`}];async function ue(e){await(0,M.promisify)(L.exec)(`open -g "${e}"`)}function le(e){return F.stringify(e,{skipNull:!0,skipEmptyString:!0})}async function z(e,t){let{authToken:r}=(0,h.getPreferenceValues)();if(!r)throw new Error("unauthorized");await ue(`things:///update?${le({"auth-token":r,id:e,...t})}`)}async function fe({todoId:e,todoParams:t}){try{return await z(e,t)}catch(r){if(r instanceof Error&&r.message==="unauthorized")return{error:"No token provided",message:"Add your Things token in the extension settings. You can find your unique token in Things settings. go to Things \u2192 Settings \u2192 General \u2192 Enable Things URLs \u2192 Manage"};throw r}}
+}`;var G=[{name:"tags",needs:["tags"],expr:`things.tags().map(${L})`},{name:"tagsWithHierarchy",needs:["tagsWithHierarchy"],expr:`things.tags().map(${C})`},{name:"projects",needs:["projects","lists"],expr:`things.projects().map(${P})`},{name:"areas",needs:["areas","lists"],expr:`things.areas().map(${O})`}];var w=require("@raycast/utils");var c=69760;var u=e=>`(SELECT GROUP_CONCAT(tg.title, ', ') FROM TMTaskTag tt JOIN TMTag tg ON tg.uuid = tt.tags WHERE tt.tasks = ${e}.uuid)`;var b=`
+  t.uuid as id,
+  t.title as name,
+  t.deadline,
+  t.startDate,
+  NULLIF(t.rt1_nextInstanceStartDate, ${c}) as nextInstanceStartDate,
+  t.rt1_recurrenceRule as recurrenceRule,
+  (t.rt1_recurrenceRule IS NOT NULL OR t.rt1_repeatingTemplate IS NOT NULL) as isRecurring,
+  p.title as projectName,
+  p.uuid as projectId,
+  COALESCE(a.title, pa.title) as areaName,
+  COALESCE(a.uuid, pa.uuid) as areaId`,rt=`${b},
+  t.status,
+  COALESCE(t.notes, '') as notes,
+  ${u("t")} as tagList`,M="COALESCE(p.trashed, 0) = 0",nt=`t.type = 0 AND t.trashed = 0 AND t.status = 0 AND ${M}`;var st=`
+    SELECT
+      t.uuid as id,
+      t.title as name,
+      t.deadline,
+      t.startDate,
+      NULLIF(t.rt1_nextInstanceStartDate, ${c}) as nextInstanceStartDate,
+      t.rt1_recurrenceRule as recurrenceRule,
+      (t.rt1_recurrenceRule IS NOT NULL OR t.rt1_repeatingTemplate IS NOT NULL) as isRecurring,
+      t.type,
+      t.status,
+      COALESCE(t.notes, '') as notes,
+      ${u("t")} as tagList,
+      p.uuid as projectId,
+      p.title as projectName,
+      p.status as projectStatus,
+      NULLIF(p.deadline, 0) as projectDeadline,
+      NULLIF(p.startDate, 0) as projectStartDate,
+      NULLIF(p.rt1_nextInstanceStartDate, ${c}) as projectNextInstanceStartDate,
+      p.rt1_recurrenceRule as projectRecurrenceRule,
+      COALESCE(p.notes, '') as projectNotes,
+      ${u("p")} as projectTagList,
+      pa.uuid as projectAreaId,
+      pa.title as projectAreaName,
+      a.uuid as areaId,
+      a.title as areaName,
+      (SELECT GROUP_CONCAT(tg.title, ', ') FROM TMAreaTag at2 JOIN TMTag tg ON tg.uuid = at2.tags WHERE at2.areas = COALESCE(a.uuid, pa.uuid)) as areaTagList,
+      t.creationDate as creationDateRaw
+    FROM TMTask t
+    LEFT JOIN TMTask p ON t.project = p.uuid
+    LEFT JOIN TMArea pa ON p.area = pa.uuid
+    LEFT JOIN TMArea a ON t.area = a.uuid`,k=`
+    EXISTS (
+      SELECT 1 FROM TMTask i
+      WHERE i.rt1_repeatingTemplate = t.uuid
+        AND i.trashed = 0
+        AND i.status = 0
+    )`,ot=`
+  AND NOT (
+    t.rt1_repeatingTemplate IS NULL
+    AND t.rt1_recurrenceRule IS NOT NULL
+    AND ${k}
+  )`;var $t=(0,s.getPreferenceValues)();async function F(e){await(0,g.promisify)(m.exec)(`open -g "${e}"`)}function _(e){return D.default.stringify(e,{skipNull:!0,skipEmptyString:!0})}async function f(e,a){let{authToken:r}=(0,s.getPreferenceValues)();if(!r)throw new Error("unauthorized");await F(`things:///update?${_({"auth-token":r,id:e,...a})}`)}async function U({todoId:e,todoParams:a}){try{await f(e,a)}catch(r){if(r instanceof Error&&r.message==="unauthorized")return{error:"No token provided",message:"Add your Things token in the extension settings. You can find your unique token in Things settings. go to Things \u2192 Settings \u2192 General \u2192 Enable Things URLs \u2192 Manage"};throw r}}

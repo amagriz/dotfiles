@@ -1,0 +1,9 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "safari",
+  "description": "Manage your Safari Tabs, History and Reading List",
+  "author": {
+    "name": "loris"
+  },
+  "license": "MIT"
+}

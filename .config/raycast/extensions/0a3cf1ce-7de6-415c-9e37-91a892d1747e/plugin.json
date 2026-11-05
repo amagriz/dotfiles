@@ -1,0 +1,10 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "homeassistant",
+  "description": "Manage your smart home with Raycast",
+  "author": {
+    "name": "tonka3000"
+  },
+  "license": "MIT",
+  "version": "1.2.4"
+}

@@ -1,0 +1,9 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "steam",
+  "description": "Search Steam games and users, view game details, and browse the games you own.",
+  "author": {
+    "name": "KevinBatdorf"
+  },
+  "license": "MIT"
+}

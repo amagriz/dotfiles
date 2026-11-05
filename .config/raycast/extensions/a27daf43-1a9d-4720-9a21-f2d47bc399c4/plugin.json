@@ -1,0 +1,9 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "tailscale",
+  "description": "List devices in your Tailnet and copy the IPv4, IPv6, or MagicDNS address to your clipboard.",
+  "author": {
+    "name": "samlinville"
+  },
+  "license": "MIT"
+}

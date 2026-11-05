@@ -16,7 +16,7 @@ font-family = "JetBrainsMono Nerd Font"
 
 # shell
 shell-integration = zsh
-shell-integration-features = cursor,ssh-env
+# shell-integration-features = cursor,ssh-env
 
 # updates
 auto-update = check

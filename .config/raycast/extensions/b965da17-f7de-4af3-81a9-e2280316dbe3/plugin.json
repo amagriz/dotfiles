@@ -1,0 +1,10 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "raindrop-io",
+  "description": "Search your Raindrop.io bookmarks",
+  "author": {
+    "name": "lardissone"
+  },
+  "license": "MIT",
+  "version": "1.0.0"
+}

@@ -1,0 +1,9 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "aerospace",
+  "description": "Control AeroSpace workspaces, windows, shortcuts, and configuration from Raycast",
+  "author": {
+    "name": "limonkufu"
+  },
+  "license": "MIT"
+}

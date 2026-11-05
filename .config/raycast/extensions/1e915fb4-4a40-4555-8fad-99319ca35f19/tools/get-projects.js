@@ -1,18 +1,29 @@
-"use strict";var F=Object.create;var b=Object.defineProperty;var B=Object.getOwnPropertyDescriptor;var G=Object.getOwnPropertyNames;var K=Object.getPrototypeOf,J=Object.prototype.hasOwnProperty;var H=(r,t)=>{for(var e in t)b(r,e,{get:t[e],enumerable:!0})},R=(r,t,e,a)=>{if(t&&typeof t=="object"||typeof t=="function")for(let n of G(t))!J.call(r,n)&&n!==e&&b(r,n,{get:()=>t[n],enumerable:!(a=B(t,n))||a.enumerable});return r};var w=(r,t,e)=>(e=r!=null?F(K(r)):{},R(t||!r||!r.__esModule?b(e,"default",{value:r,enumerable:!0}):e,r)),Z=r=>R(b({},"__esModule",{value:!0}),r);var pe={};H(pe,{default:()=>he});module.exports=Z(pe);var m=require("@raycast/api");var f=w(require("react")),o=require("@raycast/api");var I=w(require("node:child_process")),C=require("node:buffer"),p=w(require("node:stream")),O=require("node:util");var j=require("react/jsx-runtime");var k=globalThis;var $=r=>!!r&&typeof r=="object"&&typeof r.removeListener=="function"&&typeof r.emit=="function"&&typeof r.reallyExit=="function"&&typeof r.listeners=="function"&&typeof r.kill=="function"&&typeof r.pid=="number"&&typeof r.on=="function",x=Symbol.for("signal-exit emitter"),S=class{constructor(){if(this.emitted={afterExit:!1,exit:!1},this.listeners={afterExit:[],exit:[]},this.count=0,this.id=Math.random(),k[x])return k[x];Object.defineProperty(k,x,{value:this,writable:!1,enumerable:!1,configurable:!1})}on(t,e){this.listeners[t].push(e)}removeListener(t,e){let a=this.listeners[t],n=a.indexOf(e);n!==-1&&(n===0&&a.length===1?a.length=0:a.splice(n,1))}emit(t,e,a){if(this.emitted[t])return!1;this.emitted[t]=!0;let n=!1;for(let s of this.listeners[t])n=s(e,a)===!0||n;return t==="exit"&&(n=this.emit("afterExit",e,a)||n),n}},E=class{onExit(){return()=>{}}load(){}unload(){}},P=class{#o;#t;#e;#s;#i;#a;#n;#r;constructor(t){this.#o=process.platform==="win32"?"SIGINT":"SIGHUP",this.#t=new S,this.#a={},this.#n=!1,this.#r=[],this.#r.push("SIGHUP","SIGINT","SIGTERM"),globalThis.process.platform!=="win32"&&this.#r.push("SIGALRM","SIGABRT","SIGVTALRM","SIGXCPU","SIGXFSZ","SIGUSR2","SIGTRAP","SIGSYS","SIGQUIT","SIGIOT"),globalThis.process.platform==="linux"&&this.#r.push("SIGIO","SIGPOLL","SIGPWR","SIGSTKFLT"),this.#e=t,this.#a={};for(let e of this.#r)this.#a[e]=()=>{let a=this.#e.listeners(e),{count:n}=this.#t,s=t;if(typeof s.__signal_exit_emitter__=="object"&&typeof s.__signal_exit_emitter__.count=="number"&&(n+=s.__signal_exit_emitter__.count),a.length===n){this.unload();let i=this.#t.emit("exit",null,e),c=e==="SIGHUP"?this.#o:e;i||t.kill(t.pid,c)}};this.#i=t.reallyExit,this.#s=t.emit}onExit(t,e){if(!$(this.#e))return()=>{};this.#n===!1&&this.load();let a=e?.alwaysLast?"afterExit":"exit";return this.#t.on(a,t),()=>{this.#t.removeListener(a,t),this.#t.listeners.exit.length===0&&this.#t.listeners.afterExit.length===0&&this.unload()}}load(){if(!this.#n){this.#n=!0,this.#t.count+=1;for(let t of this.#r)try{let e=this.#a[t];e&&this.#e.on(t,e)}catch{}this.#e.emit=(t,...e)=>this.#l(t,...e),this.#e.reallyExit=t=>this.#c(t)}}unload(){this.#n&&(this.#n=!1,this.#r.forEach(t=>{let e=this.#a[t];if(!e)throw new Error("Listener not defined for signal: "+t);try{this.#e.removeListener(t,e)}catch{}}),this.#e.emit=this.#s,this.#e.reallyExit=this.#i,this.#t.count-=1)}#c(t){return $(this.#e)?(this.#e.exitCode=t||0,this.#t.emit("exit",this.#e.exitCode,null),this.#i.call(this.#e,this.#e.exitCode)):0}#l(t,...e){let a=this.#s;if(t==="exit"&&$(this.#e)){typeof e[0]=="number"&&(this.#e.exitCode=e[0]);let n=a.call(this.#e,t,...e);return this.#t.emit("exit",this.#e.exitCode,null),n}else return a.call(this.#e,t,...e)}},v=null,q=(r,t)=>(v||(v=$(process)?new P(process):new E),v.onExit(r,t));function Y(r,{timeout:t}={}){let e=new Promise((c,l)=>{r.on("exit",(u,h)=>{c({exitCode:u,signal:h,timedOut:!1})}),r.on("error",u=>{l(u)}),r.stdin&&r.stdin.on("error",u=>{l(u)})}),a=q(()=>{r.kill()});if(t===0||t===void 0)return e.finally(()=>a());let n,s=new Promise((c,l)=>{n=setTimeout(()=>{r.kill("SIGTERM"),l(Object.assign(new Error("Timed out"),{timedOut:!0,signal:"SIGTERM"}))},t)}),i=e.finally(()=>{clearTimeout(n)});return Promise.race([s,i]).finally(()=>a())}var A=class extends Error{constructor(){super("The output is too big"),this.name="MaxBufferError"}};function X(r){let{encoding:t}=r,e=t==="buffer",a=new p.default.PassThrough({objectMode:!1});t&&t!=="buffer"&&a.setEncoding(t);let n=0,s=[];return a.on("data",i=>{s.push(i),n+=i.length}),a.getBufferedValue=()=>e?Buffer.concat(s,n):s.join(""),a.getBufferedLength=()=>n,a}async function T(r,t){let e=X(t);return await new Promise((a,n)=>{let s=i=>{i&&e.getBufferedLength()<=C.constants.MAX_LENGTH&&(i.bufferedData=e.getBufferedValue()),n(i)};(async()=>{try{await(0,O.promisify)(p.default.pipeline)(r,e),a()}catch(i){s(i)}})(),e.on("data",()=>{e.getBufferedLength()>8e7&&s(new A)})}),e.getBufferedValue()}async function _(r,t){r.destroy();try{return await t}catch(e){return e.bufferedData}}async function Q({stdout:r,stderr:t},{encoding:e},a){let n=T(r,{encoding:e}),s=T(t,{encoding:e});try{return await Promise.all([a,n,s])}catch(i){return Promise.all([{error:i,exitCode:null,signal:i.signal,timedOut:i.timedOut||!1},_(r,n),_(t,s)])}}function ee(r){let t=typeof r=="string"?`
-`:10,e=typeof r=="string"?"\r":13;return r[r.length-1]===t&&(r=r.slice(0,-1)),r[r.length-1]===e&&(r=r.slice(0,-1)),r}function U(r,t){return r.stripFinalNewline?ee(t):t}function te({timedOut:r,timeout:t,signal:e,exitCode:a}){return r?`timed out after ${t} milliseconds`:e!=null?`was killed with ${e}`:a!=null?`failed with exit code ${a}`:"failed"}function re({stdout:r,stderr:t,error:e,signal:a,exitCode:n,command:s,timedOut:i,options:c,parentError:l}){let h=`Command ${te({timedOut:i,timeout:c?.timeout,signal:a,exitCode:n})}: ${s}`,g=e?`${h}
-${e.message}`:h,y=[g,t,r].filter(Boolean).join(`
-`);return e?e.originalMessage=e.message:e=l,e.message=y,e.shortMessage=g,e.command=s,e.exitCode=n,e.signal=a,e.stdout=r,e.stderr=t,"bufferedData"in e&&delete e.bufferedData,e}function ne({stdout:r,stderr:t,error:e,exitCode:a,signal:n,timedOut:s,command:i,options:c,parentError:l}){if(e||a!==0||n!==null)throw re({error:e,exitCode:a,signal:n,stdout:r,stderr:t,command:i,timedOut:s,options:c,parentError:l});return r}async function D(r,t,e){if(process.platform!=="darwin")throw new Error("AppleScript is only supported on macOS");let{humanReadableOutput:a,language:n,timeout:s,...i}=Array.isArray(t)?e||{}:t||{},c=a!==!1?[]:["-ss"];n==="JavaScript"&&c.push("-l","JavaScript"),Array.isArray(t)&&c.push("-",...t);let l=I.default.spawn("osascript",c,{...i,env:{PATH:"/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin"}}),u=Y(l,{timeout:s??1e4});l.stdin.end(r);let[{error:h,exitCode:g,signal:y,timedOut:N},M,z]=await Q(l,{encoding:"utf8"},u),W=U({stripFinalNewline:!0},M),V=U({stripFinalNewline:!0},z);return ne({stdout:W,stderr:V,error:h,exitCode:g,signal:y,timedOut:N,command:"osascript",options:e,parentError:new Error})}var ae=(0,m.getPreferenceValues)(),d=class extends Error{constructor(e,a,n,s){super(s?`${s}: ${e}`:e);this.type=a;this.originalError=n;this.operation=s;this.name="ThingsError"}},se=async(r,t)=>{try{let e=await D(`(function(){${r}})()`,{humanReadableOutput:!1,language:"JavaScript",timeout:6e4});return e?JSON.parse(e.replace(/:\s*undefined/g,": null")):void 0}catch(e){let n=(typeof e=="string"?e:e instanceof Error?e.message:String(e)).replace("execution error: Error: ","");throw n.match(/Application can't be found/i)?new d("Things application not found. Please make sure Things is installed and running.","APP_NOT_FOUND",n,t):n.match(/not allowed assistive access/i)||n.match(/permission/i)||n.match(/-1743/)?new d("Permission denied. Please grant Raycast access to Things in System Settings > Privacy & Security > Automation > Raycast > Things.","PERMISSION_DENIED",n,t):n.match(/doesn't understand/i)||n.match(/can't get/i)?new d("Things automation interface error. This might be due to a Things version incompatibility or the app not being ready.","EXECUTION_ERROR",n,t):n.match(/timed out/i)?new d("Command timed out. Things may be unresponsive or not running.","EXECUTION_ERROR",n,t):new d(`Unexpected error: ${n}`,"UNKNOWN_ERROR",n,t)}};var ie="tag => tag.name()",oe=`todo => {
+"use strict";var J=Object.create;var N=Object.defineProperty;var B=Object.getOwnPropertyDescriptor;var q=Object.getOwnPropertyNames;var Q=Object.getPrototypeOf,Y=Object.prototype.hasOwnProperty;var G=(t,r)=>{for(var e in r)N(t,e,{get:r[e],enumerable:!0})},I=(t,r,e,s)=>{if(r&&typeof r=="object"||typeof r=="function")for(let a of q(r))!Y.call(t,a)&&a!==e&&N(t,a,{get:()=>r[a],enumerable:!(s=B(r,a))||s.enumerable});return t};var j=(t,r,e)=>(e=t!=null?J(Q(t)):{},I(r||!t||!t.__esModule?N(e,"default",{value:t,enumerable:!0}):e,t)),K=t=>I(N({},"__esModule",{value:!0}),t);var ft={};G(ft,{default:()=>Dt});module.exports=K(ft);var T=require("@raycast/api"),gt=j(require("query-string"));var L=require("@raycast/utils");var i=require("@raycast/api"),X=j(require("dayjs")),Rt={inbox:{title:"Inbox",icon:{source:i.Icon.Tray,tintColor:i.Color.Blue}},today:{title:"Today",icon:{source:i.Icon.Star,tintColor:i.Color.Yellow}},evening:{title:"This Evening",icon:{source:i.Icon.Moon,tintColor:i.Color.Purple}},tomorrow:{title:"Tomorrow",icon:{source:i.Icon.ArrowClockwise,tintColor:i.Color.Orange}},upcoming:{title:"Upcoming",icon:{source:i.Icon.Calendar,tintColor:i.Color.Red}},anytime:{title:"Anytime",icon:{source:i.Icon.Layers,tintColor:i.Color.Green}},someday:{title:"Someday",icon:{source:i.Icon.Folder,tintColor:i.Color.SecondaryText}},logbook:{title:"Logbook",icon:{source:i.Icon.CheckCircle,tintColor:i.Color.Green}},list:t=>({title:t.name,icon:t.type==="area"?{source:i.Icon.Folder,tintColor:i.Color.Green}:{source:i.Icon.Circle,tintColor:i.Color.Blue}})},Et={open:i.Icon.Circle,completed:{source:i.Icon.CheckCircle,tintColor:i.Color.Blue},canceled:{source:i.Icon.XMarkCircle,tintColor:i.Color.SecondaryText}},ht={open:i.Icon.Circle,completed:i.Icon.CheckCircle,canceled:i.Icon.XMarkCircle};function R(t=[],r=[]){let e=t.filter(a=>!a.area).map(a=>({...a,type:"project"})),s=[];return r.forEach(a=>{s.push({...a,type:"area"});let n=t.filter(c=>c.area&&c.area.id===a.id).map(c=>({...c,type:"project"}));s.push(...n)}),[...e,...s]}var p=class extends Error{constructor(e,s,a,n){super(n?`${n}: ${e}`:e);this.type=s;this.originalError=a;this.operation=n;this.name="ThingsError"}type;originalError;operation},C=async(t,r)=>{try{let e=await(0,L.runAppleScript)(`JSON.stringify((function(){${t}})())`,{language:"JavaScript",timeout:6e4});return e?JSON.parse(e):void 0}catch(e){let a=(typeof e=="string"?e:e instanceof Error?e.message:String(e)).replace("execution error: Error: ","");throw a.match(/Application can't be found/i)?new p("Things application not found. Please make sure Things is installed and running.","APP_NOT_FOUND",a,r):a.match(/not allowed assistive access/i)||a.match(/permission/i)||a.match(/-1743/)?new p("Permission denied. Please grant Raycast access to Things in System Settings > Privacy & Security > Automation > Raycast > Things.","PERMISSION_DENIED",a,r):a.match(/doesn't understand/i)||a.match(/can't get/i)?new p("Things automation interface error. This might be due to a Things version incompatibility or the app not being ready.","EXECUTION_ERROR",a,r):a.match(/timed out/i)?new p("Command timed out. Things may be unresponsive or not running.","EXECUTION_ERROR",a,r):new p(`Unexpected error: ${a}`,"UNKNOWN_ERROR",a,r)}};var l=`(d => {
+  const y = d.getFullYear();
+  const m = String(d.getMonth() + 1).padStart(2, '0');
+  const day = String(d.getDate()).padStart(2, '0');
+  return y + '-' + m + '-' + day;
+})`,z="tag => tag.name()",V=`tag => {
+  const props = tag.properties();
+  const parentRef = props.parentTag;
+  return {
+    name: props.name,
+    parent: parentRef ? parentRef.name() : null
+  };
+}`,Z=`todo => {
   const props = todo.properties();
   return {
     id: props.id,
     name: props.name,
     status: props.status,
-    notes: props.notes,
+    notes: props.notes || '',
     tags: todo.tagNames(),
-    dueDate: props.dueDate ? props.dueDate.toISOString() : null,
-    activationDate: props.activationDate ? props.activationDate.toISOString() : null,
+    areaTags: null,
+    dueDate: props.dueDate ? ${l}(props.dueDate) : '',
+    activationDate: props.activationDate ? ${l}(props.activationDate) : '',
+    creationDate: props.creationDate ? props.creationDate.toISOString() : '',
   };
-}`,ce=`project => {
+}`,tt=`project => {
   const props = project.properties();
   const areaRef = props.area;
   let area = null;
@@ -24,32 +35,130 @@ ${e.message}`:h,y=[g,t,r].filter(Boolean).join(`
     id: props.id,
     name: props.name,
     status: props.status,
-    notes: props.notes,
+    notes: props.notes || '',
     tags: project.tagNames(),
-    dueDate: props.dueDate ? props.dueDate.toISOString() : null,
-    activationDate: props.activationDate ? props.activationDate.toISOString() : null,
+    dueDate: props.dueDate ? ${l}(props.dueDate) : '',
+    activationDate: props.activationDate ? ${l}(props.activationDate) : '',
     area,
-    todos: project.toDos().map(${oe})
+    todos: project.toDos().map(${Z})
   };
-}`,le=`todo => {
+}`,et=`todo => {
   const props = todo.properties();
   return {
     id: props.id,
     name: props.name,
     status: props.status,
-    notes: props.notes,
+    notes: props.notes || '',
     tags: todo.tagNames(),
-    dueDate: props.dueDate ? props.dueDate.toISOString() : null,
-    activationDate: props.activationDate ? props.activationDate.toISOString() : null,
+    areaTags: null,
+    dueDate: props.dueDate ? ${l}(props.dueDate) : '',
+    activationDate: props.activationDate ? ${l}(props.activationDate) : '',
+    creationDate: props.creationDate ? props.creationDate.toISOString() : '',
     isProject: props.pcls === "project",
   };
-}`,ue=`area => {
+}`,at=`area => {
   const props = area.properties();
   return {
     id: props.id,
     name: props.name,
     tags: area.tagNames(),
-    todos: area.toDos().map(${le})
+    todos: area.toDos().map(${et})
   };
-}`,fe=[{name:"tags",needs:["tags"],expr:`things.tags().map(${ie})`},{name:"projects",needs:["projects","lists"],expr:`things.projects().map(${ce})`},{name:"areas",needs:["areas","lists"],expr:`things.areas().map(${ue})`}];async function L(...r){let t=new Set(r),e=[`const things = Application('${ae.thingsAppIdentifier}');`,"const result = {};",...fe.filter(({needs:n})=>n.some(s=>t.has(s))).map(({name:n,expr:s})=>`result.${n} = ${s};`),"return result;"].join(`
-`),a=await se(e,`Get ${r.join(", ")}`);return Object.fromEntries(r.map(n=>[n,n==="lists"?de(a.projects,a.areas):a[n]]))}function de(r=[],t=[]){let e=r.filter(n=>!n.area).map(n=>({...n,type:"project"})),a=[];return t.forEach(n=>{a.push({...n,type:"area"});let s=r.filter(i=>i.area&&i.area.id===n.id).map(i=>({...i,type:"project"}));a.push(...s)}),[...e,...a]}async function he(){let{projects:r}=await L("projects");return r}
+}`;var rt=[{name:"tags",needs:["tags"],expr:`things.tags().map(${z})`},{name:"tagsWithHierarchy",needs:["tagsWithHierarchy"],expr:`things.tags().map(${V})`},{name:"projects",needs:["projects","lists"],expr:`things.projects().map(${tt})`},{name:"areas",needs:["areas","lists"],expr:`things.areas().map(${at})`}];async function x(t,...r){let e=new Set(r),s=[`const things = Application('${t}');`,"const result = {};",...rt.filter(({needs:n})=>n.some(c=>e.has(c))).map(({name:n,expr:c})=>`result.${n} = ${c};`),"return result;"].join(`
+`),a=await C(s,`Get ${r.join(", ")}`);return Object.fromEntries(r.map(n=>[n,n==="lists"?R(a.projects,a.areas):a[n]]))}var D=require("fs"),_=require("os"),E=require("path"),d=require("@raycast/utils");var S={TMTask:["uuid","title","notes","status","trashed","type","start","startDate","deadline","rt1_recurrenceRule","rt1_nextInstanceStartDate","rt1_repeatingTemplate","project","area","index","creationDate","stopDate","userModificationDate","todayIndex"],TMArea:["uuid","title","index"],TMChecklistItem:["uuid","title","status","task","index"],TMTag:["uuid","title","parent"],TMTaskTag:["tasks","tags"],TMAreaTag:["areas","tags"]},O=16,P=12,$=7,nt=15,st=31,w=262213760,u=69760;function m(t){if(!t||t===w||t===u)return null;let r=t>>O,e=t>>P&nt,s=t>>$&st;return r<=0||e<1||e>12||s<1||s>31?null:`${r.toString().padStart(4,"0")}-${e.toString().padStart(2,"0")}-${s.toString().padStart(2,"0")}`}function b(t,r,e){return t<<O|r<<P|e<<$}function ot(t,r){let e=m(t);if(!e)return null;let[s,a,n]=e.split("-").map(Number),c=new Date(s,a-1,n);return c.setDate(c.getDate()+r),b(c.getFullYear(),c.getMonth()+1,c.getDate())}function M(){let t=b(2026,6,11),r=m(t),e="2026-06-11";if(r!==e)throw new Error(`Things date calculation has changed \u2014 dates may be incorrect. Expected "${e}", got "${r}".`)}function it(t){if(!t||typeof t!="string")return null;let r=t.match(/<key>ts<\/key>\s*<integer>(-?\d+)<\/integer>/);return r?parseInt(r[1],10):null}function A(t,r,e,s){let a=null;if(t?a=m(t):e&&e!==u&&(a=m(e)),r===w){let n=it(s);if(n!==null&&e){let c=ot(e,n);return{effectiveDeadline:c!==null?m(c):null,effectiveStartDate:a,dueDateIsRecurring:!0}}return{effectiveDeadline:null,effectiveStartDate:a,dueDateIsRecurring:!0}}return r?{effectiveDeadline:m(r),effectiveStartDate:a,dueDateIsRecurring:!1}:{effectiveDeadline:null,effectiveStartDate:a,dueDateIsRecurring:!1}}function ct(){let t=(0,E.join)((0,_.homedir)(),"Library","Group Containers","JLMPQHK86H.com.culturedcode.ThingsMac"),r=new Error("Things database not found. Make sure Things is installed and Raycast has Full Disk Access in System Settings \u2192 Privacy & Security \u2192 Full Disk Access.");if(!(0,D.existsSync)(t))throw r;let e=[],s=(0,D.readdirSync)(t).find(n=>n.startsWith("ThingsData-"));s&&e.push((0,E.join)(t,s,"Things Database.thingsdatabase","main.sqlite")),e.push((0,E.join)(t,"Things Database.thingsSQLite"));let a=e.find(D.existsSync);if(a)return a;throw r}var f;async function ut(){if(f&&(0,D.existsSync)(f))return f;let t=ct();return M(),await pt(t),f=t,f}async function pt(t){let r=Object.keys(S).map(n=>`'${n}'`).join(", "),e=await(0,d.executeSQL)(t,`SELECT m.name AS table_name, p.name AS column_name
+     FROM sqlite_master m
+     JOIN pragma_table_info(m.name) p
+     WHERE m.type = 'table' AND m.name IN (${r})`),s={};for(let n of e)s[n.table_name]||(s[n.table_name]=new Set),s[n.table_name].add(n.column_name);let a=n=>new Error(`Things updated and changed its internal database schema \u2014 please check for an extension update. ${n}`);for(let[n,c]of Object.entries(S)){if(!s[n])throw a(`Table "${n}" not found.`);let o=c.filter(h=>!s[n].has(h));if(o.length)throw a(`Missing column(s) in "${n}": ${o.join(", ")}.`)}}var y=t=>`CASE ${t} WHEN 2 THEN 'canceled' WHEN 3 THEN 'completed' ELSE 'open' END`,g=t=>`(SELECT GROUP_CONCAT(tg.title, ', ') FROM TMTaskTag tt JOIN TMTag tg ON tg.uuid = tt.tags WHERE tt.tasks = ${t}.uuid)`,k=t=>`(SELECT GROUP_CONCAT(tg.title, ', ') FROM TMAreaTag at2 JOIN TMTag tg ON tg.uuid = at2.tags WHERE at2.areas = ${t}.uuid)`;var dt=`
+  t.uuid as id,
+  t.title as name,
+  t.deadline,
+  t.startDate,
+  NULLIF(t.rt1_nextInstanceStartDate, ${u}) as nextInstanceStartDate,
+  t.rt1_recurrenceRule as recurrenceRule,
+  (t.rt1_recurrenceRule IS NOT NULL OR t.rt1_repeatingTemplate IS NOT NULL) as isRecurring,
+  p.title as projectName,
+  p.uuid as projectId,
+  COALESCE(a.title, pa.title) as areaName,
+  COALESCE(a.uuid, pa.uuid) as areaId`,xt=`${dt},
+  t.status,
+  COALESCE(t.notes, '') as notes,
+  ${g("t")} as tagList`,lt="COALESCE(p.trashed, 0) = 0",Ot=`t.type = 0 AND t.trashed = 0 AND t.status = 0 AND ${lt}`;function F(t){let{effectiveDeadline:r,effectiveStartDate:e}=A(t.startDate??0,t.deadline??0,t.nextInstanceStartDate??0,t.recurrenceRule);return{id:t.id,name:t.name,status:t.status,notes:t.notes,tags:t.tags??"",areaTags:null,dueDate:r??"",activationDate:e??"",creationDate:t.creationDate??""}}var Pt=`
+    SELECT
+      t.uuid as id,
+      t.title as name,
+      t.deadline,
+      t.startDate,
+      NULLIF(t.rt1_nextInstanceStartDate, ${u}) as nextInstanceStartDate,
+      t.rt1_recurrenceRule as recurrenceRule,
+      (t.rt1_recurrenceRule IS NOT NULL OR t.rt1_repeatingTemplate IS NOT NULL) as isRecurring,
+      t.type,
+      t.status,
+      COALESCE(t.notes, '') as notes,
+      ${g("t")} as tagList,
+      p.uuid as projectId,
+      p.title as projectName,
+      p.status as projectStatus,
+      NULLIF(p.deadline, 0) as projectDeadline,
+      NULLIF(p.startDate, 0) as projectStartDate,
+      NULLIF(p.rt1_nextInstanceStartDate, ${u}) as projectNextInstanceStartDate,
+      p.rt1_recurrenceRule as projectRecurrenceRule,
+      COALESCE(p.notes, '') as projectNotes,
+      ${g("p")} as projectTagList,
+      pa.uuid as projectAreaId,
+      pa.title as projectAreaName,
+      a.uuid as areaId,
+      a.title as areaName,
+      (SELECT GROUP_CONCAT(tg.title, ', ') FROM TMAreaTag at2 JOIN TMTag tg ON tg.uuid = at2.tags WHERE at2.areas = COALESCE(a.uuid, pa.uuid)) as areaTagList,
+      t.creationDate as creationDateRaw
+    FROM TMTask t
+    LEFT JOIN TMTask p ON t.project = p.uuid
+    LEFT JOIN TMArea pa ON p.area = pa.uuid
+    LEFT JOIN TMArea a ON t.area = a.uuid`,mt=`
+    EXISTS (
+      SELECT 1 FROM TMTask i
+      WHERE i.rt1_repeatingTemplate = t.uuid
+        AND i.trashed = 0
+        AND i.status = 0
+    )`,$t=`
+  AND NOT (
+    t.rt1_repeatingTemplate IS NULL
+    AND t.rt1_recurrenceRule IS NOT NULL
+    AND ${mt}
+  )`;async function U(...t){let r=await ut(),e=new Set(t),s={};if(e.has("tags")||e.has("tagsWithHierarchy")){let a=await(0,d.executeSQL)(r,"SELECT t.title, p.title as parentTitle FROM TMTag t LEFT JOIN TMTag p ON p.uuid = t.parent ORDER BY t.title COLLATE NOCASE");e.has("tags")&&(s.tags=a.map(n=>n.title)),e.has("tagsWithHierarchy")&&(s.tagsWithHierarchy=a.map(n=>({name:n.title,parent:n.parentTitle??null})))}if(e.has("projects")||e.has("lists")){let[a,n]=await Promise.all([(0,d.executeSQL)(r,`SELECT p.uuid as id, p.title as name,
+          ${y("p.status")} as status,
+          COALESCE(p.notes, '') as notes,
+          ${g("p")} as tags,
+          p.deadline, p.startDate,
+          NULLIF(p.rt1_nextInstanceStartDate, ${u}) as nextInstanceStartDate,
+          p.rt1_recurrenceRule as recurrenceRule,
+          a.uuid as areaId, a.title as areaName,
+          ${k("a")} as areaTags
+        FROM TMTask p
+        LEFT JOIN TMArea a ON a.uuid = p.area
+        WHERE p.type = 1 AND p.trashed = 0 AND p.status = 0
+        ORDER BY p."index" ASC`),(0,d.executeSQL)(r,`SELECT t.uuid as id, t.title as name,
+          ${y("t.status")} as status,
+          COALESCE(t.notes, '') as notes,
+          ${g("t")} as tags,
+          t.deadline, t.startDate,
+          NULLIF(t.rt1_nextInstanceStartDate, ${u}) as nextInstanceStartDate,
+          t.rt1_recurrenceRule as recurrenceRule,
+          datetime(t.creationDate, 'unixepoch') as creationDate,
+          t.project as projectId
+        FROM TMTask t
+        WHERE t.type = 0 AND t.trashed = 0 AND t.status = 0
+        ORDER BY t."index" ASC`)]),c={};for(let o of n)o.projectId&&(c[o.projectId]||(c[o.projectId]=[]),c[o.projectId].push(F(o)));s.projects=a.map(o=>{let{effectiveDeadline:h,effectiveStartDate:W}=A(o.startDate??0,o.deadline??0,o.nextInstanceStartDate??0,o.recurrenceRule);return{id:o.id,name:o.name,status:o.status,notes:o.notes,tags:o.tags??"",dueDate:h??"",activationDate:W??"",area:o.areaId?{id:o.areaId,name:o.areaName??"",tags:o.areaTags??""}:void 0,todos:c[o.id]??[]}})}if(e.has("areas")||e.has("lists")){let[a,n]=await Promise.all([(0,d.executeSQL)(r,`SELECT a.uuid as id, a.title as name,
+          ${k("a")} as tags
+        FROM TMArea a
+        ORDER BY a."index" ASC`),(0,d.executeSQL)(r,`SELECT t.uuid as id, t.title as name,
+          ${y("t.status")} as status,
+          COALESCE(t.notes, '') as notes,
+          ${g("t")} as tags,
+          t.deadline, t.startDate,
+          NULLIF(t.rt1_nextInstanceStartDate, ${u}) as nextInstanceStartDate,
+          t.rt1_recurrenceRule as recurrenceRule,
+          datetime(t.creationDate, 'unixepoch') as creationDate,
+          t.area as areaId
+        FROM TMTask t
+        WHERE t.type = 0 AND t.trashed = 0 AND t.status = 0 AND t.project IS NULL AND t.area IS NOT NULL
+        ORDER BY t."index" ASC`)]),c={};for(let o of n)o.areaId&&(c[o.areaId]||(c[o.areaId]=[]),c[o.areaId].push(F(o)));s.areas=a.map(o=>({id:o.id,name:o.name,tags:o.tags??"",todos:c[o.id]??[]}))}return e.has("lists")&&(s.lists=R(s.projects,s.areas)),Object.fromEntries(t.map(a=>[a,s[a]]))}var v=(0,T.getPreferenceValues)();async function H(...t){return v.useUnofficialApi?U(...t):x(v.thingsAppIdentifier,...t)}async function Dt(){let{projects:t}=await H("projects");return t}

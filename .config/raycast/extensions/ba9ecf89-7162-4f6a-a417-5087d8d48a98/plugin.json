@@ -1,0 +1,9 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "1password",
+  "description": "Search, open or edit your 1Password passwords from Raycast",
+  "author": {
+    "name": "khasbilegt"
+  },
+  "license": "MIT"
+}
